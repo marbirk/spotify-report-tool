@@ -24,6 +24,8 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.2"
   },
@@ -33,5 +35,16 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": ["eslint"],
+      "**/*.+(js|jsx|json|css)": ["prettier --write", "git add"]
+    }
   }
 }
