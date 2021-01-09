@@ -42,9 +42,8 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.js": ["eslint"],
-      "**/*.+(js|jsx|json|css)": ["prettier --write", "git add"]
-    }
+    "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+      "prettier --write"
+    ]
   }
 }
