@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io5'
 
-export default function Footer() {
+const Footer = () => {
     const currentYear = new Date().getFullYear()
     return (
         <footer>
@@ -19,17 +20,29 @@ export default function Footer() {
             </ul>
             <ul>
                 <li>
-                    <a href="https://github.com/marbirk">Github</a>
+                    <ExternalLink href="https://github.com/marbirk">
+                        <IoLogoGithub />
+                    </ExternalLink>
                 </li>
                 <li>
-                    <a href="https://twitter.com/MBirkhahn">Twitter</a>
+                    <ExternalLink href="https://twitter.com/MBirkhahn">
+                        <IoLogoTwitter />
+                    </ExternalLink>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/marcelbirkhahn/">
-                        LinkedIn
-                    </a>
+                    <ExternalLink href="https://www.linkedin.com/in/marcelbirkhahn/">
+                        <IoLogoLinkedin />
+                    </ExternalLink>
                 </li>
             </ul>
         </footer>
     )
 }
+
+const ExternalLink = ({ children, ...props }) => (
+    <a target="_blank" rel="noreferrer noopener" {...props}>
+        {children}
+    </a>
+)
+
+export default Footer
