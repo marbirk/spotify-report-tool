@@ -1,8 +1,6 @@
 # marcelbirkhahn.com
 
--   dark mode switch
--   dark mode via tailwind
--   tailwind ausprobieren
+-   dark mode switch klassen mit tailwind?
 -   schriften?
 -   Icons?
 -   Favicons?
