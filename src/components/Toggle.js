@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Toggle = ({ checked, onChange }) => (
-    <span className="toggle-control">
+    <span className="flex relative items-center pt-0 pr-1 pl-1">
         <input
-            className="dmcheck"
+            className="bg-gray-500 relative w-10 h-3 rounded-md cursor-pointer appearance-none outline-none dmcheck"
             type="checkbox"
             checked={checked}
             onChange={onChange}

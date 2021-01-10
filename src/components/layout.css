@@ -32,25 +32,8 @@ body.dark {
     outline: none;
 }
 
-.toggle-control {
-    position: relative;
-    padding: 0 4px;
-    display: flex;
-    align-items: center;
-}
-
 input[type='checkbox'].dmcheck {
-    width: 40px;
-    height: 10px;
-    background: #555;
-    position: relative;
-    border-radius: 5px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
     vertical-align: 2px;
-    outline: none;
 }
 
 input[type='checkbox'].dmcheck:checked + label {
