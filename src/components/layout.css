@@ -12,10 +12,12 @@ body {
 
 body.light {
     @apply bg-white;
+    @apply text-gray-800;
 }
 
 body.dark {
     @apply bg-gray-800;
+    @apply text-gray-200;
 }
 
 .dark-mode-toggle {
