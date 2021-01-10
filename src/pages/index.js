@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
-import DarkModeToggle from '../components/darkModeToggle'
+import Layout from '../components/Layout'
+import DarkModeToggle from '../components/DarkModeToggle'
 
 export default function Home() {
     return (
