@@ -6,6 +6,8 @@ body {
     @apply transition-colors;
     @apply duration-300;
     @apply ease-in-out;
+    @apply font-sans;
+    @apply antialiased;
 }
 
 body.light {
