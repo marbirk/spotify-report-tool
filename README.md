@@ -1,6 +1,6 @@
 # marcelbirkhahn.com
 
--   dark mode switch klassen mit tailwind?
--   schriften?
--   Icons?
+-   Dark mode switch klassen mit tailwind!
+-   Schriften anpassen?
 -   Favicons?
+-   Lime Color als Highlight?
