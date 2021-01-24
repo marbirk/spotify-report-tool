@@ -2,10 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
 
 const HomePage = ({ data }) => {
     const { title, description, keywords } = data.site.siteMetadata
-    console.log(data)
+    const topFiveArtists = data.allSpotifyTopArtist.edges
+    console.log(data.allSpotifyTopArtist.edges)
     return (
         <Layout>
             <Helmet
@@ -28,6 +30,24 @@ const HomePage = ({ data }) => {
                 retail for customers with musical interest, study focus: Modern
                 and clean software development & Data Science, network page?
             </div>
+            <div>
+                My favourite bands in the last month are:
+                <ol>
+                    {topFiveArtists.map(artist => {
+                        return (
+                            <li key={artist.node.id}>
+                                {artist.node.name}
+                                <Img
+                                    fixed={
+                                        artist.node.image.localFile
+                                            .childImageSharp.fixed
+                                    }
+                                />
+                            </li>
+                        )
+                    })}
+                </ol>
+            </div>
         </Layout>
     )
 }
@@ -44,16 +64,18 @@ export const query = graphql`
         allSpotifyTopArtist(
             filter: { time_range: { eq: "short_term" } }
             sort: { fields: order }
+            limit: 5
         ) {
             edges {
                 node {
                     name
                     genres
+                    id
                     image {
                         localFile {
                             childImageSharp {
-                                fluid(maxWidth: 400) {
-                                    ...GatsbyImageSharpFluid_withWebp
+                                fixed(width: 125, height: 125) {
+                                    ...GatsbyImageSharpFixed
                                 }
                             }
                         }
