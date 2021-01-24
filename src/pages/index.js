@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
 
-export default function Home() {
+const HomePage = ({ data }) => {
     return (
         <Layout>
             <div>
@@ -10,9 +11,21 @@ export default function Home() {
                 project: Personas in e-commerce - evaluation of the data-driven
                 persona method as a basis for product recommendations in online
                 retail for customers with musical interest, study focus: Modern
-                and clean software development & Data Science , network?
-                gatsby-source-spotify
+                and clean software development & Data Science, network page?
             </div>
+            {data.site.siteMetadata.description}
         </Layout>
     )
 }
+
+export const query = graphql`
+    query HomePageQuery {
+        site {
+            siteMetadata {
+                description
+            }
+        }
+    }
+`
+
+export default HomePage

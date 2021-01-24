@@ -6,6 +6,10 @@
 
 module.exports = {
     /* Your site config here */
+    siteMetadata: {
+        title: 'Marcel Birkhahn',
+        description: 'This is me!',
+    },
     plugins: [
         `gatsby-plugin-use-dark-mode`,
         `gatsby-plugin-postcss`,
