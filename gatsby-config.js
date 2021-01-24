@@ -9,10 +9,12 @@ module.exports = {
     siteMetadata: {
         title: 'Marcel Birkhahn',
         description: 'This is me!',
+        keywords: ['Portfolio', 'Frontend Engineer'],
     },
     plugins: [
         `gatsby-plugin-use-dark-mode`,
         `gatsby-plugin-postcss`,
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-spotify`,
             options: {
