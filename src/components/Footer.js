@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -30,8 +30,8 @@ const Footer = () => {
                     </ExternalLink>
                 </li>
                 <li>
-                    <ExternalLink href="https://www.linkedin.com/in/marcelbirkhahn/">
-                        <IoLogoLinkedin />
+                    <ExternalLink href="https://www.xing.com/profile/Marcel_Birkhahn/cv">
+                        <IoLogoXing />
                     </ExternalLink>
                 </li>
             </ul>
