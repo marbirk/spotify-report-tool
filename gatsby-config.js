@@ -15,6 +15,8 @@ module.exports = {
         `gatsby-plugin-use-dark-mode`,
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-source-spotify`,
             options: {

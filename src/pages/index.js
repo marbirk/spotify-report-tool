@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 
 const HomePage = ({ data }) => {
     const { title, description, keywords } = data.site.siteMetadata
+    console.log(data)
     return (
         <Layout>
             <Helmet
@@ -38,6 +39,26 @@ export const query = graphql`
                 title
                 description
                 keywords
+            }
+        }
+        allSpotifyTopArtist(
+            filter: { time_range: { eq: "short_term" } }
+            sort: { fields: order }
+        ) {
+            edges {
+                node {
+                    name
+                    genres
+                    image {
+                        localFile {
+                            childImageSharp {
+                                fluid(maxWidth: 400) {
+                                    ...GatsbyImageSharpFluid_withWebp
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
