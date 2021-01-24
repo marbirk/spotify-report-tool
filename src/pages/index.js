@@ -61,11 +61,7 @@ export const query = graphql`
                 keywords
             }
         }
-        allSpotifyTopArtist(
-            filter: { time_range: { eq: "short_term" } }
-            sort: { fields: order }
-            limit: 5
-        ) {
+        allSpotifyTopArtist(sort: { fields: order }, limit: 5) {
             edges {
                 node {
                     name
