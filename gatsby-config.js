@@ -11,6 +11,10 @@ module.exports = {
         description: 'This is me!',
         keywords: ['Portfolio', 'Frontend Engineer'],
     },
+    flags: {
+        PRESERVE_FILE_DOWNLOAD_CACHE: true,
+        PRESERVE_WEBPACK_CACHE: true,
+    },
     plugins: [
         `gatsby-plugin-use-dark-mode`,
         `gatsby-plugin-postcss`,
