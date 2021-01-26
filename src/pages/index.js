@@ -56,9 +56,9 @@ const HomePage = ({ data }) => {
                             <li key={artist.node.id}>
                                 {artist.node.name}
                                 <Img
-                                    fixed={
+                                    fluid={
                                         artist.node.image.localFile
-                                            .childImageSharp.fixed
+                                            .childImageSharp.fluid
                                     }
                                 />
                             </li>
@@ -89,8 +89,8 @@ export const query = graphql`
                     image {
                         localFile {
                             childImageSharp {
-                                fixed(width: 125, height: 125) {
-                                    ...GatsbyImageSharpFixed
+                                fluid(maxWidth: 400) {
+                                    ...GatsbyImageSharpFluid_withWebp
                                 }
                             }
                         }
