@@ -49,7 +49,7 @@ const HomePage = ({ data }) => {
                 </p>
             </section>
             <section>
-                network page? My favourite bands in the last month are:
+                My favourite bands in the last month are:
                 <ol>
                     {topFiveArtists.map(artist => {
                         return (
@@ -66,6 +66,7 @@ const HomePage = ({ data }) => {
                     })}
                 </ol>
             </section>
+            network page?, Storybook?, Unit tests?
         </Layout>
     )
 }

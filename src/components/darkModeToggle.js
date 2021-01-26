@@ -10,7 +10,7 @@ const DarkModeToggle = () => {
     const darkMode = useDarkMode(false, darkModeConfig)
 
     return (
-        <div className="flex mt-0 mr-auto ml-auto dark-mode-toggle">
+        <div className="flex mt-0 ml-auto dark-mode-toggle">
             <button
                 className="text-yellow-400"
                 type="button"
