@@ -54,7 +54,7 @@ const HomePage = ({ data }) => {
                     {topFiveArtists.map(artist => {
                         return (
                             <li key={artist.node.id}>
-                                {artist.node.name}
+                                {artist.node.name}, {artist.node.genres[0]}
                                 <Img
                                     fluid={
                                         artist.node.image.localFile
