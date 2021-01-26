@@ -22,16 +22,34 @@ const HomePage = ({ data }) => {
                     This site runs best with JavaScript enabled.
                 </noscript>
             </Helmet>
-            <div>
-                Frontend Engineer (B.Sc.) oder Software Engineer (B.Sc.),
-                Working for Steinberg, Master student at TH Lübeck, last
-                project: Personas in e-commerce - evaluation of the data-driven
-                persona method as a basis for product recommendations in online
-                retail for customers with musical interest, study focus: Modern
-                and clean software development & Data Science, network page?
-            </div>
-            <div>
-                My favourite bands in the last month are:
+            <section>
+                <h1>
+                    I'm Marcel Birkhahn, Frontend Engineer (B.Sc.) oder Software
+                    Engineer (B.Sc.), Student of media informatics (M.Sc.), rock
+                    music enthusiast, festival fan // groß und type writter
+                    effect?
+                </h1>
+            </section>
+            <section>
+                <p>
+                    I'm working for Steinberg Media Technologies GmbH as a
+                    Frontend Engineer in Hamburg.
+                </p>
+            </section>
+            <section>
+                <p>
+                    Master student at TH Lübeck, study focus: Modern and clean
+                    software development & Data Science
+                </p>
+                <p>
+                    My last project: Personas in e-commerce - evaluation of the
+                    data-driven persona method as a basis for product
+                    recommendations in online retail for customers with musical
+                    interest
+                </p>
+            </section>
+            <section>
+                network page? My favourite bands in the last month are:
                 <ol>
                     {topFiveArtists.map(artist => {
                         return (
@@ -47,7 +65,7 @@ const HomePage = ({ data }) => {
                         )
                     })}
                 </ol>
-            </div>
+            </section>
         </Layout>
     )
 }
