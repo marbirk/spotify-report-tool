@@ -53,7 +53,7 @@ const HomePage = ({ data }) => {
                 <ol>
                     {topFiveArtists.map(artist => {
                         return (
-                            <li key={artist.node.id}>
+                            <li key={artist.node.id} className="capitalize">
                                 {artist.node.name}, {artist.node.genres[0]}
                                 <Img
                                     fluid={
