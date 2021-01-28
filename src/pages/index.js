@@ -22,7 +22,7 @@ const HomePage = ({ data }) => {
                     This site runs best with JavaScript enabled.
                 </noscript>
             </Helmet>
-            <section>
+            <section className="mb-12">
                 <p className="text-5xl uppercase">I am</p>
                 <h1 className="text-5xl uppercase squishy-text">
                     <Typewriter
@@ -31,8 +31,8 @@ const HomePage = ({ data }) => {
                                 'Marcel Birkhahn',
                                 'Frontend Engineer',
                                 'Informatics Student',
-                                'Hardrock enthusiast',
-                                'Festival fan',
+                                'Hard Rock Enthusiast',
+                                'Festival Fan',
                             ],
                             autoStart: true,
                             loop: true,
@@ -61,7 +61,9 @@ const HomePage = ({ data }) => {
             </section>
             <section>
                 My favourite bands in the last month are:
-                <ol>{renderBandList()}</ol>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {renderBandList()}
+                </div>
             </section>
             network page?, Storybook?, Unit tests?
         </Layout>
@@ -70,14 +72,20 @@ const HomePage = ({ data }) => {
     function renderBandList() {
         return topFiveArtists.map(artist => {
             return (
-                <li key={artist.node.id} className="capitalize">
-                    {artist.node.name}, {artist.node.genres[0]}
+                <div
+                    key={artist.node.id}
+                    className=" bg-gray-300 dark:bg-gray-900 capitalize p-4"
+                >
                     <Img
                         fluid={
                             artist.node.image.localFile.childImageSharp.fluid
                         }
                     />
-                </li>
+                    <div className="mt-4">
+                        <p>{artist.node.name}</p>
+                        <p className="italic">{artist.node.genres[0]}</p>
+                    </div>
+                </div>
             )
         })
     }
