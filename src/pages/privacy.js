@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const ImprintPage = () => {
+const PrivacyPage = () => {
     return (
         <Layout>
-            <h1>Imprint</h1>
+            <h1>Privacy</h1>
         </Layout>
     )
 }
 
-export default ImprintPage
+export default PrivacyPage

@@ -11,7 +11,9 @@ const Footer = () => {
             </div>
             <ul className="flex mb-4">
                 <ListElement>
-                    <Link to="/contact">Contact</Link>
+                    <ExternalLink href="mailto:m.birkhahn@posteo.de">
+                        Contact
+                    </ExternalLink>
                 </ListElement>
                 <ListElement>
                     <Link to="/imprint">Imprint</Link>
