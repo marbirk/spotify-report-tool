@@ -39,6 +39,10 @@ const NetworkPage = () => {
             name: 'Naturheilpraxis Ingrid Berger',
             web: 'http://naturheilpraxis-ingrid-berger.de/',
         },
+        {
+            name: 'Björn Birkhahn',
+            web: 'https://500px.com/p/bjoernbirkhahn?view=photos',
+        },
     ]
     return (
         <Layout>
@@ -50,14 +54,16 @@ const NetworkPage = () => {
     )
 
     function renderNetworkList() {
-        return networkList.map(contact => {
-            return (
-                <a href={contact.web} className="w-full h-32">
-                    Initialien?
-                    {contact.name}
-                </a>
-            )
-        })
+        return networkList
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(contact => {
+                return (
+                    <a href={contact.web} className="w-full h-32">
+                        Initialien?
+                        {contact.name}
+                    </a>
+                )
+            })
     }
 }
 
