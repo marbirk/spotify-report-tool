@@ -4,43 +4,48 @@ import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
-    const linkClasses = 'pr-2 pl-2'
     return (
         <footer className="flex flex-col items-center mt-24 mb-16">
             <div className="mb-4">
                 © {currentYear} Marcel Birkhahn. All rights reserved.
             </div>
             <ul className="flex mb-4">
-                <li className={linkClasses}>
+                <ListElement>
                     <Link to="/contact">Contact</Link>
-                </li>
-                <li className={linkClasses}>
+                </ListElement>
+                <ListElement>
                     <Link to="/impress">Imprint</Link>
-                </li>
-                <li className={linkClasses}>
+                </ListElement>
+                <ListElement>
                     <Link to="/privacy">Privacy</Link>
-                </li>
+                </ListElement>
             </ul>
             <ul className="flex">
-                <li className={linkClasses}>
+                <ListElement>
                     <ExternalLink href="https://github.com/marbirk">
                         <IoLogoGithub />
                     </ExternalLink>
-                </li>
-                <li className={linkClasses}>
+                </ListElement>
+                <ListElement>
                     <ExternalLink href="https://twitter.com/MBirkhahn">
                         <IoLogoTwitter />
                     </ExternalLink>
-                </li>
-                <li className={linkClasses}>
+                </ListElement>
+                <ListElement>
                     <ExternalLink href="https://www.xing.com/profile/Marcel_Birkhahn/cv">
                         <IoLogoXing />
                     </ExternalLink>
-                </li>
+                </ListElement>
             </ul>
         </footer>
     )
 }
+
+const ListElement = ({ children, ...props }) => (
+    <li className="pr-2 pl-2" {...props}>
+        {children}
+    </li>
+)
 
 const ExternalLink = ({ children, ...props }) => (
     <a target="_blank" rel="noreferrer noopener" {...props}>
