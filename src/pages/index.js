@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import Typewriter from 'typewriter-effect'
@@ -60,12 +60,17 @@ const HomePage = ({ data }) => {
                 </p>
             </section>
             <section>
+                <p>
+                    Discover my <Link to="/network">network</Link>
+                </p>
+            </section>
+            <section>
                 My favourite bands in the last month are:
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {renderBandList()}
                 </div>
             </section>
-            network page?, Storybook?, Unit tests?, Lime Highlight Color?
+            Storybook?, Unit tests?, Lime Highlight Color?
         </Layout>
     )
 
