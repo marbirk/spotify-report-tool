@@ -70,7 +70,7 @@ const HomePage = ({ data }) => {
                     {renderBandList()}
                 </div>
             </section>
-            Storybook?, Unit tests?, Lime Highlight Color?
+            Storybook?, Unit tests?, Lime Highlight Color?, Greensta Logo
         </Layout>
     )
 
