@@ -12,7 +12,7 @@ const DarkModeToggle = () => {
     return (
         <div className="flex mt-0 ml-auto dark-mode-toggle">
             <button
-                className="text-yellow-400"
+                className="text-lg"
                 type="button"
                 onClick={darkMode.disable}
             >
@@ -23,11 +23,7 @@ const DarkModeToggle = () => {
                 checked={darkMode.value}
                 onChange={darkMode.toggle}
             />
-            <button
-                className="text-gray-600"
-                type="button"
-                onClick={darkMode.enable}
-            >
+            <button className="text-lg" type="button" onClick={darkMode.enable}>
                 ☾
             </button>
         </div>

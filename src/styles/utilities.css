@@ -1,0 +1,8 @@
+.squishy-text {
+    word-break: break-word; /* Samsung browser */
+    word-wrap: break-word; /* IE 11 */
+    overflow-wrap: anywhere;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}

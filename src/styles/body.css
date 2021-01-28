@@ -17,7 +17,6 @@ body.dark {
 }
 
 .dark-mode-toggle > button {
-    font-size: 1.2em;
     background: none;
     border: none;
     cursor: pointer;
@@ -52,4 +51,15 @@ input[type='checkbox'].dmcheck + label {
     background: #fff;
     opacity: 0.9;
     background-color: #f6f6f6;
+}
+
+section:first-of-type span {
+    border-right: 0.05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
