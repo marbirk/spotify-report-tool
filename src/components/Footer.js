@@ -23,7 +23,7 @@ const Footer = () => {
                     <Link to="/privacy">Privacy</Link>
                 </ListElement>
             </ul>
-            <ul className="flex">
+            <ul className="flex text-2xl">
                 <ListElement>
                     <ExternalLink href="https://github.com/marbirk">
                         <IoLogoGithub />
