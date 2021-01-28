@@ -4,12 +4,13 @@ import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
+    const marginBottom = 'mb-4'
     return (
         <footer className="flex flex-col items-center mt-24 mb-16">
-            <div className="mb-4">
+            <div className={marginBottom}>
                 © {currentYear} Marcel Birkhahn. All rights reserved.
             </div>
-            <ul className="flex mb-4">
+            <ul className={`flex ${marginBottom}`}>
                 <ListElement>
                     <ExternalLink href="mailto:m.birkhahn@posteo.de">
                         Contact
