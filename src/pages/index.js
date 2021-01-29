@@ -60,7 +60,7 @@ const HomePage = ({ location, data }) => {
             return (
                 <div
                     key={artist.node.id}
-                    className=" bg-gray-300 dark:bg-gray-900 capitalize p-4"
+                    className="bg-gray-300 dark:bg-gray-900 capitalize p-4"
                 >
                     <Img
                         fluid={
