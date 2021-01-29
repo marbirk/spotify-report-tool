@@ -57,8 +57,9 @@ const NetworkPage = ({ location }) => {
         return networkList
             .sort((a, b) => a.name.localeCompare(b.name))
             .map(contact => {
+                const key = contact.name.toLowerCase().replace(/ /g, '-')
                 return (
-                    <a href={contact.web} className="w-full h-32">
+                    <a key={key} href={contact.web} className="w-full h-32">
                         Initialien?
                         {contact.name}
                     </a>
