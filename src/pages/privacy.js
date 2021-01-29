@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const PrivacyPage = () => {
+const PrivacyPage = ({ location }) => {
     return (
-        <Layout>
-            <h1>Privacy</h1>
+        <Layout location={location}>
+            <h2>Privacy</h2>
         </Layout>
     )
 }

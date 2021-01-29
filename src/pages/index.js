@@ -3,13 +3,12 @@ import Layout from '../components/Layout'
 import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
-import Typewriter from 'typewriter-effect'
 
-const HomePage = ({ data }) => {
+const HomePage = ({ location, data }) => {
     const { title, description, keywords } = data.site.siteMetadata
     const topFiveArtists = data.allSpotifyTopArtist.edges
     return (
-        <Layout>
+        <Layout location={location}>
             <Helmet
                 title={`Home | ${title}`}
                 meta={[
@@ -22,24 +21,6 @@ const HomePage = ({ data }) => {
                     This site runs best with JavaScript enabled.
                 </noscript>
             </Helmet>
-            <section className="mb-12">
-                <p className="text-5xl uppercase">I am</p>
-                <h1 className="text-5xl uppercase squishy-text">
-                    <Typewriter
-                        options={{
-                            strings: [
-                                'Marcel Birkhahn',
-                                'Frontend Engineer',
-                                'Informatics Student',
-                                'Hard Rock Enthusiast',
-                                'Festival Fan',
-                            ],
-                            autoStart: true,
-                            loop: true,
-                        }}
-                    />
-                </h1>
-            </section>
             <section>
                 <p>
                     I'm working for Steinberg Media Technologies GmbH as a

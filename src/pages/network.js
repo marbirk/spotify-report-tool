@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const NetworkPage = () => {
+const NetworkPage = ({ location }) => {
     const networkList = [
         {
             name: 'Dragan Vidovic',
@@ -45,8 +45,8 @@ const NetworkPage = () => {
         },
     ]
     return (
-        <Layout>
-            <h1>Network</h1>
+        <Layout location={location}>
+            <h2>Network</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {renderNetworkList()}
             </div>
