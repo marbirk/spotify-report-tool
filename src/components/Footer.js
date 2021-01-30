@@ -7,9 +7,9 @@ const Footer = () => {
     const marginBottom = 'mb-4'
     return (
         <footer className="flex flex-col items-center mt-24 mb-16">
-            <div className={marginBottom}>
+            <p className={`text-center ${marginBottom}`}>
                 © {currentYear} Marcel Birkhahn. All rights reserved.
-            </div>
+            </p>
             <ul className={`flex ${marginBottom}`}>
                 <ListElement>
                     <ExternalLink href="mailto:m.birkhahn@posteo.de">
