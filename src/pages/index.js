@@ -51,7 +51,7 @@ const HomePage = ({ location, data }) => {
                     {renderBandList()}
                 </div>
             </section>
-            Storybook?, Unit tests?, Lime Highlight Color?, Greensta Logo
+            Unit tests?
         </Layout>
     )
 
