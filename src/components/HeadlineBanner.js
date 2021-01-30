@@ -7,7 +7,7 @@ const HeadlineBanner = props => {
     return (
         <section className="mb-12 mt-6">
             <Link to="/">
-                <h1 className="text-5xl uppercase squishy-text">
+                <h1 className="squishy-text">
                     {isStartPage ? getStartPageBanner() : getDefaultBanner()}
                 </h1>
             </Link>
