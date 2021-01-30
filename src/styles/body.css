@@ -4,6 +4,7 @@ body {
     @apply ease-in-out;
     @apply font-sans;
     @apply antialiased;
+    @apply text-base;
 }
 
 body.light {
