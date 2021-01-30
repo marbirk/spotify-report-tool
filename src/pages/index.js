@@ -51,7 +51,7 @@ const HomePage = ({ location, data }) => {
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?
+            Unit tests?, HeadlineBanner to Header?
         </Layout>
     )
 

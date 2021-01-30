@@ -33,3 +33,7 @@ h5,
 h6 {
     @apply text-xl;
 }
+
+section {
+    @apply mb-6;
+}
