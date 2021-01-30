@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply uppercase;
+}
+
+h1 {
+    @apply text-5xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4,
+h5,
+h6 {
+    @apply text-xl;
+}
