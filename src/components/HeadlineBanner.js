@@ -37,10 +37,11 @@ const getStartPageBanner = () => {
 }
 
 const getDefaultBanner = () => {
+    const getNameString = name => <span className="block">{name}</span>
     return (
         <>
-            <span className="block">Marcel</span>
-            <span className="block">Birkhahn</span>
+            {getNameString('Marcel')}
+            {getNameString('Birkhahn')}
         </>
     )
 }

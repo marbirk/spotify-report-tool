@@ -7,7 +7,7 @@ body {
 }
 
 body.light {
-    @apply bg-white;
+    background-color: white;
     @apply text-gray-800;
 }
 
@@ -51,4 +51,9 @@ input[type='checkbox'].dmcheck + label {
     background: #fff;
     opacity: 0.9;
     background-color: #f6f6f6;
+}
+
+a {
+    @apply text-cyan-500;
+    @apply dark:text-cyan-300;
 }

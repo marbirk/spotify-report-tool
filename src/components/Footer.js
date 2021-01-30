@@ -25,17 +25,26 @@ const Footer = () => {
             </ul>
             <ul className="flex text-2xl">
                 <ListElement>
-                    <ExternalLink href="https://github.com/marbirk">
+                    <ExternalLink
+                        href="https://github.com/marbirk"
+                        className="text-gray-800 dark:text-gray-200"
+                    >
                         <IoLogoGithub />
                     </ExternalLink>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink href="https://twitter.com/MBirkhahn">
+                    <ExternalLink
+                        href="https://twitter.com/MBirkhahn"
+                        className="text-gray-800 dark:text-gray-200"
+                    >
                         <IoLogoTwitter />
                     </ExternalLink>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink href="https://www.xing.com/profile/Marcel_Birkhahn/cv">
+                    <ExternalLink
+                        href="https://www.xing.com/profile/Marcel_Birkhahn/cv"
+                        className="text-gray-800 dark:text-gray-200"
+                    >
                         <IoLogoXing />
                     </ExternalLink>
                 </ListElement>
