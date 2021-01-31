@@ -31,13 +31,12 @@ const HomePage = ({ location, data }) => {
                 <p>
                     I'm doing my studies of media informatics (M.Sc.) at TH
                     Lübeck, study focus: Modern and clean software development &
-                    Data Science
+                    Data Science, My last project:
                 </p>
                 <p>
-                    My last project: Personas in e-commerce - evaluation of the
-                    data-driven persona method as a basis for product
-                    recommendations in online retail for customers with musical
-                    interest
+                    Personas in e-commerce - evaluation of the data-driven
+                    persona method as a basis for product recommendations in
+                    online retail for customers with musical interest
                 </p>
             </section>
             <section>
@@ -46,12 +45,13 @@ const HomePage = ({ location, data }) => {
                 </p>
             </section>
             <section>
-                My favourite bands in the last month are:
+                <p>My favourite bands in the last month are:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?, font for headline?, filter to network?
+            Unit tests?, font for headline?, filter to network?, dynamic size
+            for HeadlineBanner?
         </Layout>
     )
 

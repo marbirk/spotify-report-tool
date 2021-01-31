@@ -24,9 +24,8 @@ const getStartPageBanner = () => {
                     strings: [
                         'Marcel Birkhahn',
                         'Frontend Engineer',
-                        'Informatics Student',
-                        'Hard Rock Enthusiast',
-                        'Festival Fan',
+                        'Studying IT Master',
+                        'Hard Rock Fan',
                     ],
                     autoStart: true,
                     loop: true,

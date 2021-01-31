@@ -33,13 +33,13 @@
         "name": "Institut für persönliche Bildung",
         "web": "https://ifpb.eu/",
         "active": true,
-        "tags": [""]
+        "tags": ["coaching"]
     },
     {
         "name": "Glücklich in 90 Minuten",
         "web": "https://www.gluecklich-in-90-minuten.com/",
         "active": true,
-        "tags": [""]
+        "tags": ["musical"]
     },
     {
         "name": "Bianca Gibisch",
@@ -51,7 +51,7 @@
         "name": "Naturheilpraxis Ingrid Berger",
         "web": "http://naturheilpraxis-ingrid-berger.de/",
         "active": true,
-        "tags": [""]
+        "tags": ["health"]
     },
     {
         "name": "Björn Birkhahn",
