@@ -1,49 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
 
-const NetworkPage = ({ location }) => {
-    const networkList = [
-        {
-            name: 'Dragan Vidovic',
-            web: 'http://www.draganvidovic.com/',
-        },
-        {
-            name: 'Jone Schardt',
-            web: 'https://joneschardt.de/',
-        },
-        {
-            name: 'Nils Wiere',
-            web: 'https://nilswiere.de/',
-        },
-        {
-            name: 'Andreas Rissling',
-            web: 'https://www.gueteklasse-a.de/',
-        },
-        {
-            name: 'Lars Graubner',
-            web: 'https://larsgraubner.com/',
-        },
-        {
-            name: 'Institut für persönliche Bildung',
-            web: 'https://ifpb.eu/',
-        },
-        {
-            name: 'Glücklich in 90 Minuten',
-            web: 'https://www.gluecklich-in-90-minuten.com/',
-        },
-        {
-            name: 'Bianca Gibisch',
-            web: 'https://biancagibisch.de/',
-        },
-        {
-            name: 'Naturheilpraxis Ingrid Berger',
-            web: 'http://naturheilpraxis-ingrid-berger.de/',
-        },
-        {
-            name: 'Björn Birkhahn',
-            web: 'https://500px.com/p/bjoernbirkhahn?view=photos',
-        },
-    ]
+const NetworkPage = ({ location, data }) => {
     return (
         <Layout location={location}>
             <h2>Network</h2>
@@ -54,28 +13,44 @@ const NetworkPage = ({ location }) => {
     )
 
     function renderNetworkList() {
-        return networkList
-            .sort((a, b) => a.name.localeCompare(b.name))
+        return data.allNetworkJson.edges
+            .filter(contact => contact.node.active)
+            .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map(contact => {
-                const key = contact.name.toLowerCase().replace(/ /g, '-')
+                const key = contact.node.name.toLowerCase().replace(/ /g, '-')
                 let initials = ''
-                contact.name.split(' ').forEach(element => {
+                contact.node.name.split(' ').forEach(element => {
                     initials += element[0]
                 })
                 return (
                     <a
                         key={key}
-                        href={contact.web}
+                        href={contact.node.web}
                         className="w-full h-32 bg-gray-300 dark:bg-gray-900 capitalize p-4"
                     >
                         {initials}
                         <div className="mt-4">
-                            <p>{contact.name}</p>
+                            <p>{contact.node.name}</p>
                         </div>
                     </a>
                 )
             })
     }
 }
+
+export const query = graphql`
+    query NetworkPageQuery {
+        allNetworkJson {
+            edges {
+                node {
+                    name
+                    id
+                    active
+                    web
+                }
+            }
+        }
+    }
+`
 
 export default NetworkPage

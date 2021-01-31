@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Dragan Vidovic",
+        "web": "http://www.draganvidovic.com/",
+        "active": false
+    },
+    {
+        "name": "Jone Schardt",
+        "web": "https://joneschardt.de/",
+        "active": false
+    },
+    {
+        "name": "Nils Wiere",
+        "web": "https://nilswiere.de/",
+        "active": true
+    },
+    {
+        "name": "Andreas Rissling",
+        "web": "https://www.gueteklasse-a.de/",
+        "active": true
+    },
+    {
+        "name": "Lars Graubner",
+        "web": "https://larsgraubner.com/",
+        "active": true
+    },
+    {
+        "name": "Institut für persönliche Bildung",
+        "web": "https://ifpb.eu/",
+        "active": true
+    },
+    {
+        "name": "Glücklich in 90 Minuten",
+        "web": "https://www.gluecklich-in-90-minuten.com/",
+        "active": true
+    },
+    {
+        "name": "Bianca Gibisch",
+        "web": "https://biancagibisch.de/",
+        "active": true
+    },
+    {
+        "name": "Naturheilpraxis Ingrid Berger",
+        "web": "http://naturheilpraxis-ingrid-berger.de/",
+        "active": true
+    },
+    {
+        "name": "Björn Birkhahn",
+        "web": "https://500px.com/p/bjoernbirkhahn?view=photos",
+        "active": true
+    }
+]
