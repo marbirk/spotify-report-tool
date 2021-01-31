@@ -31,6 +31,7 @@ const NetworkPage = ({ location, data }) => {
                         {initials}
                         <div className="mt-4">
                             <p>{contact.node.name}</p>
+                            <p>{contact.node.tags.toString()}</p>
                         </div>
                     </a>
                 )
@@ -47,6 +48,7 @@ export const query = graphql`
                     id
                     active
                     web
+                    tags
                 }
             }
         }

@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body.dark a {
+    @apply text-cyan-300;
+}
+
 a {
-    @apply text-cyan-500;
-    @apply dark:text-cyan-300;
+    @apply text-cyan-600;
 }
 
 h1,

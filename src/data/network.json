@@ -2,51 +2,61 @@
     {
         "name": "Dragan Vidovic",
         "web": "http://www.draganvidovic.com/",
-        "active": false
+        "active": false,
+        "tags": ["design", "art direction"]
     },
     {
         "name": "Jone Schardt",
         "web": "https://joneschardt.de/",
-        "active": false
+        "active": false,
+        "tags": ["illustration", "photography"]
     },
     {
         "name": "Nils Wiere",
         "web": "https://nilswiere.de/",
-        "active": true
+        "active": true,
+        "tags": ["web design", "frontend"]
     },
     {
         "name": "Andreas Rissling",
         "web": "https://www.gueteklasse-a.de/",
-        "active": true
+        "active": true,
+        "tags": ["frontend"]
     },
     {
         "name": "Lars Graubner",
         "web": "https://larsgraubner.com/",
-        "active": true
+        "active": true,
+        "tags": ["frontend", "apps"]
     },
     {
         "name": "Institut für persönliche Bildung",
         "web": "https://ifpb.eu/",
-        "active": true
+        "active": true,
+        "tags": [""]
     },
     {
         "name": "Glücklich in 90 Minuten",
         "web": "https://www.gluecklich-in-90-minuten.com/",
-        "active": true
+        "active": true,
+        "tags": [""]
     },
     {
         "name": "Bianca Gibisch",
         "web": "https://biancagibisch.de/",
-        "active": true
+        "active": true,
+        "tags": ["photography"]
     },
     {
         "name": "Naturheilpraxis Ingrid Berger",
         "web": "http://naturheilpraxis-ingrid-berger.de/",
-        "active": true
+        "active": true,
+        "tags": [""]
     },
     {
         "name": "Björn Birkhahn",
         "web": "https://500px.com/p/bjoernbirkhahn?view=photos",
-        "active": true
+        "active": true,
+        "tags": ["photography"]
     }
 ]

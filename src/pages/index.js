@@ -51,8 +51,7 @@ const HomePage = ({ location, data }) => {
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?, color transition to all css, font for headline?, tags,
-            active and filter to network?
+            Unit tests?, font for headline?, filter to network?
         </Layout>
     )
 
