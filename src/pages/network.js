@@ -18,17 +18,13 @@ const NetworkPage = ({ location, data }) => {
             .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map(contact => {
                 const key = contact.node.name.toLowerCase().replace(/ /g, '-')
-                let initials = ''
-                contact.node.name.split(' ').forEach(element => {
-                    initials += element[0]
-                })
                 return (
                     <a
                         key={key}
                         href={contact.node.web}
                         className="w-full h-32 bg-gray-200 dark:bg-gray-700 capitalize p-4"
                     >
-                        {initials}
+                        {getInitials(contact.node.name)}
                         <div className="mt-4">
                             <p>{contact.node.name}</p>
                             <p>{contact.node.tags.toString()}</p>
@@ -36,6 +32,14 @@ const NetworkPage = ({ location, data }) => {
                     </a>
                 )
             })
+    }
+
+    function getInitials(name) {
+        let initials = ''
+        name.split(' ').forEach(element => {
+            initials += element[0]
+        })
+        return initials
     }
 }
 
