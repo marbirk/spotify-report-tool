@@ -19,10 +19,6 @@ h6 {
     @apply uppercase;
 }
 
-h1 {
-    @apply text-2xl;
-}
-
 section {
     @apply mb-6;
 }
