@@ -26,7 +26,7 @@ const NetworkPage = ({ location, data }) => {
                     <a
                         key={key}
                         href={contact.node.web}
-                        className="w-full h-32 bg-gray-300 dark:bg-gray-900 capitalize p-4"
+                        className="w-full h-32 bg-gray-200 dark:bg-gray-700 capitalize p-4"
                     >
                         {initials}
                         <div className="mt-4">
