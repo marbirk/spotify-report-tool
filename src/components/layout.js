@@ -6,8 +6,7 @@ import HeadlineBanner from './HeadlineBanner'
 export default function Layout(props) {
     return (
         <main className="container mx-auto md:max-w-screen-md">
-            <Header />
-            <HeadlineBanner {...props.location} />
+            <Header {...props.location} />
             {props.children}
             <Footer />
         </main>
