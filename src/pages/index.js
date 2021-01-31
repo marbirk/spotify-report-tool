@@ -45,13 +45,16 @@ const HomePage = ({ location, data }) => {
                 </p>
             </section>
             <section>
-                <p>My favourite bands in the last month are:</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <p>
+                    While I'm working I listen to music every day and I'm always
+                    interested in new bands. The following list contains my
+                    favourite artists in the past month:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16">
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?, font for headline?, filter to network?, dynamic size
-            for HeadlineBanner?
+            Unit tests?, font for headline and text?, filter to network?
         </Layout>
     )
 

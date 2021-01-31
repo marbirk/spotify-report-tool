@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const HeadlineBanner = props => {
     const isStartPage = props.pathname.length === 1
     return (
-        <div className="mb-12 mt-6">
+        <div className="mb-32 mt-24">
             <Link to="/">
                 <h1 className="squishy-text">
                     {isStartPage ? getStartPageBanner() : getDefaultBanner()}
