@@ -54,7 +54,8 @@ const HomePage = ({ location, data }) => {
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?, font for headline and text?, filter to network?
+            Unit tests?, font for headline and text?, filter to network?,
+            Impressum-Text, Privacy-Text, Cookie Consent
         </Layout>
     )
 
