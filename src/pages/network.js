@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
+import ExternalLink from '../components/ExternalLink'
 
 const NetworkPage = ({ location, data }) => {
     return (
@@ -19,17 +20,17 @@ const NetworkPage = ({ location, data }) => {
             .map(contact => {
                 const key = contact.node.name.toLowerCase().replace(/ /g, '-')
                 return (
-                    <a
+                    <ExternalLink
                         key={key}
                         href={contact.node.web}
-                        className="w-full h-32 bg-gray-200 dark:bg-gray-700 capitalize p-4"
+                        className="w-full h-32 bg-gray-200 dark:bg-gray-700 p-4"
                     >
                         {getInitials(contact.node.name)}
                         <div className="mt-4">
                             <p>{contact.node.name}</p>
                             <p>{contact.node.tags.toString()}</p>
                         </div>
-                    </a>
+                    </ExternalLink>
                 )
             })
     }

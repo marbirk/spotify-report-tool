@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
+import ExternalLink from './ExternalLink'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -57,12 +58,6 @@ const ListElement = ({ children, ...props }) => (
     <li className="pr-2 pl-2" {...props}>
         {children}
     </li>
-)
-
-const ExternalLink = ({ children, ...props }) => (
-    <a target="_blank" rel="noreferrer noopener" {...props}>
-        {children}
-    </a>
 )
 
 export default Footer

@@ -55,7 +55,7 @@ const HomePage = ({ location, data }) => {
                 </div>
             </section>
             Unit tests?, font for headline and text?, filter to network?,
-            Impressum-Text, Privacy-Text, Cookie Consent
+            Privacy-Text, Cookie Consent
         </Layout>
     )
 
