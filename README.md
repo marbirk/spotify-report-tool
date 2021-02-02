@@ -1,6 +1,4 @@
 # marcelbirkhahn.com
 
--   Dark mode switch klassen mit tailwind!
--   Schriften anpassen?
--   Favicons?
--   Lime Color als Highlight?
+This is my personal website.
+Feel free to send me a pull request if you find typos or bugs!
