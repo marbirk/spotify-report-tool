@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
+import ExternalLink from '../components/ExternalLink'
 
 const HomePage = ({ location, data }) => {
     const { title, description, keywords } = data.site.siteMetadata
@@ -23,17 +24,29 @@ const HomePage = ({ location, data }) => {
             </Helmet>
             <section>
                 <p>
-                    I'm working for Steinberg Media Technologies GmbH as a
-                    Frontend Engineer (B.Sc.) in Hamburg.
+                    My job as a Frontend Engineer (B.Sc.) for{' '}
+                    <ExternalLink href="https://www.steinberg.net/">
+                        Steinberg Media Technologies GmbH
+                    </ExternalLink>{' '}
+                    combines two passions of me. I love music and I'm fascinated
+                    of modern web technologies. Steinberg, based in Hamburg and
+                    part of Yamaha Corporation, is well known for its{' '}
+                    <ExternalLink href="https://de.wikipedia.org/wiki/Cubase">
+                        Digital Audio Workstation Cubase
+                    </ExternalLink>
+                    . A company full with musicians provides the possibility to
+                    live both passions.
                 </p>
             </section>
             <section>
                 <p>
-                    I'm doing my studies of media informatics (M.Sc.) at TH
-                    Lübeck, study focus: Modern and clean software development &
-                    Data Science, My last project:
+                    Next to my job I'm doing studies of media informatics
+                    (M.Sc.) at TH Lübeck. User Experience, modern software
+                    development, clean coding and Data Science are part of my
+                    master degree. My last university project was formed in
+                    corporation with Steinberg:
                 </p>
-                <p>
+                <p className="p-10">
                     Personas in e-commerce - evaluation of the data-driven
                     persona method as a basis for product recommendations in
                     online retail for customers with musical interest
