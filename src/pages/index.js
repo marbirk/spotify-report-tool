@@ -69,7 +69,7 @@ const HomePage = ({ location, data }) => {
             </section>
             Unit tests?, font for headline and text?, filter to network?,
             Privacy-Text, Cookie Consent, Favicons, Dark mode switch klassen mit
-            tailwind, Typescript?
+            tailwind, Typescript?, gatsby-plugin-mdx
         </Layout>
     )
 
