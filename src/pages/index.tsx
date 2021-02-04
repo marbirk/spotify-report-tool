@@ -1,15 +1,54 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/ExternalLink'
 
-const HomePage = ({ location, data }) => {
-    const { title, description, keywords } = data.site.siteMetadata
-    const topFiveArtists = data.allSpotifyTopArtist.edges
+interface HomePageProps extends PageProps {
+    data: {
+        site: {
+            siteMetadata: SiteMetadataProps
+        }
+        allSpotifyTopArtist: {
+            edges: Array<SpotifyTopArtistProps>
+        }
+    }
+}
+
+interface SiteMetadataProps {
+    title: string
+    description: string
+    keywords: Array<string>
+}
+
+interface SpotifyTopArtistProps {
+    node: {
+        name: string
+        genres: Array<string>
+        id: string
+        image: {
+            localFile: {
+                childImageSharp: {
+                    fluid: {
+                        base64: string
+                        aspectRatio: number
+                        sizes: string
+                        src: string
+                        srcSet: string
+                        srcSetWebp: string
+                        srcWebp: string
+                    }
+                }
+            }
+        }
+    }
+}
+
+const HomePage = (props: HomePageProps) => {
+    const { title, description, keywords } = props.data.site.siteMetadata
     return (
-        <Layout location={location}>
+        <Layout location={props.location}>
             <Helmet
                 title={`Home | ${title}`}
                 meta={[
@@ -74,7 +113,7 @@ const HomePage = ({ location, data }) => {
     )
 
     function renderBandList() {
-        return topFiveArtists.map(artist => {
+        return props.data.allSpotifyTopArtist.edges.map(artist => {
             return (
                 <div
                     key={artist.node.id}

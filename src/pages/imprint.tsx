@@ -5,12 +5,12 @@ import { graphql, PageProps } from 'gatsby'
 interface ImprintPageProps extends PageProps {
     data: {
         allImprintJson: {
-            edges: Array<Section>
+            edges: Array<SectionProps>
         }
     }
 }
 
-interface Section {
+interface SectionProps {
     node: {
         headline: string
         subline: string
@@ -19,7 +19,6 @@ interface Section {
 }
 
 const ImprintPage = (props: ImprintPageProps) => {
-    console.log(props)
     return (
         <Layout location={props.location}>
             <h2>Imprint</h2>
@@ -35,7 +34,7 @@ const ImprintPage = (props: ImprintPageProps) => {
 
     function renderPageContent() {
         return props.data.allImprintJson.edges.map(
-            (section: Section, index: number) => {
+            (section: SectionProps, index: number) => {
                 return (
                     <section key={index}>
                         {section.node.headline !== '' && (

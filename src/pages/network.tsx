@@ -1,11 +1,29 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import ExternalLink from '../components/ExternalLink'
 
-const NetworkPage = ({ location, data }) => {
+interface NetworkPageProps extends PageProps {
+    data: {
+        allNetworkJson: {
+            edges: Array<ContactProps>
+        }
+    }
+}
+
+interface ContactProps {
+    node: {
+        name: string
+        id: string
+        active: boolean
+        web: string
+        tags: Array<string>
+    }
+}
+
+const NetworkPage = (props: NetworkPageProps) => {
     return (
-        <Layout location={location}>
+        <Layout location={props.location}>
             <h2>Network</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {renderNetworkList()}
@@ -14,14 +32,13 @@ const NetworkPage = ({ location, data }) => {
     )
 
     function renderNetworkList() {
-        return data.allNetworkJson.edges
+        return props.data.allNetworkJson.edges
             .filter(contact => contact.node.active)
             .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map(contact => {
-                const key = contact.node.name.toLowerCase().replace(/ /g, '-')
                 return (
                     <ExternalLink
-                        key={key}
+                        key={contact.node.id}
                         href={contact.node.web}
                         className="w-full h-32 bg-gray-200 dark:bg-gray-700 p-4"
                     >
@@ -37,7 +54,7 @@ const NetworkPage = ({ location, data }) => {
             })
     }
 
-    function getInitials(name) {
+    function getInitials(name: string) {
         let initials = ''
         name.split(' ').forEach(element => {
             initials += element[0]
