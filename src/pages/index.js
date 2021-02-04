@@ -87,7 +87,9 @@ const HomePage = ({ location, data }) => {
                     />
                     <div className="mt-4">
                         <p>{artist.node.name}</p>
-                        <p className="italic">{artist.node.genres[0]}</p>
+                        <p className="italic text-xs">
+                            {artist.node.genres[0]}
+                        </p>
                     </div>
                 </div>
             )

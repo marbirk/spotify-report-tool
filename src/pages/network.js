@@ -28,7 +28,9 @@ const NetworkPage = ({ location, data }) => {
                         {getInitials(contact.node.name)}
                         <div className="mt-4">
                             <p>{contact.node.name}</p>
-                            <p>{contact.node.tags.toString()}</p>
+                            <p className="text-xs">
+                                {contact.node.tags.toString()}
+                            </p>
                         </div>
                     </ExternalLink>
                 )
