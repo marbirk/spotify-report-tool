@@ -80,10 +80,12 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     Next to my job I'm doing studies of media informatics
-                    (M.Sc.) at TH Lübeck. User Experience, modern software
-                    development, clean coding and Data Science are part of my
+                    (M.Sc.) at TH Lübeck. User experience, modern software
+                    development, clean coding and data science are part of my
                     master degree. My last university project was formed in
-                    corporation with Steinberg:
+                    corporation with Steinberg. It was a interdisciplinary
+                    project with focus on persona methods, web analytics and
+                    data science approaches:
                 </p>
                 <p className="p-10">
                     Personas in e-commerce - evaluation of the data-driven
@@ -100,7 +102,7 @@ const HomePage = (props: HomePageProps) => {
                 <p>
                     While I'm working I listen to music every day and I'm always
                     interested in new bands. The following list contains my
-                    favourite artists in the past month:
+                    current favourite artists:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16">
                     {renderBandList()}
