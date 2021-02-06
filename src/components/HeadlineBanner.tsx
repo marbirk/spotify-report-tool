@@ -1,8 +1,9 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import { Link } from 'gatsby'
+import { Location } from '../utils/types'
 
-const HeadlineBanner = props => {
+const HeadlineBanner = (props: Location) => {
     const isStartPage = props.pathname.length === 1
     return (
         <div className="mb-32 mt-24">
@@ -20,6 +21,7 @@ const getStartPageBanner = () => {
         <>
             <span>I am</span>
             <Typewriter
+                onInit={() => {}}
                 options={{
                     strings: [
                         'Marcel Birkhahn',
@@ -36,7 +38,9 @@ const getStartPageBanner = () => {
 }
 
 const getDefaultBanner = () => {
-    const getNameString = name => <span className="block">{name}</span>
+    const getNameString = (name: string) => (
+        <span className="block">{name}</span>
+    )
     return (
         <>
             {getNameString('Marcel')}

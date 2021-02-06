@@ -18,11 +18,7 @@ const DarkModeToggle = () => {
             >
                 ☀
             </button>
-            <Toggle
-                type="checkbox"
-                checked={darkMode.value}
-                onChange={darkMode.toggle}
-            />
+            <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
             <button className="text-lg" type="button" onClick={darkMode.enable}>
                 ☾
             </button>

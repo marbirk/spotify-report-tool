@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 import ExternalLink from './ExternalLink'
+import ListElement from './ListElement'
+import List from './List'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -11,7 +13,7 @@ const Footer = () => {
             <p className={`text-center ${marginBottom}`}>
                 © {currentYear} Marcel Birkhahn. All rights reserved.
             </p>
-            <ul className={`flex ${marginBottom}`}>
+            <List className={`flex ${marginBottom}`}>
                 <ListElement>
                     <ExternalLink href="mailto:m.birkhahn@posteo.de">
                         Contact
@@ -23,8 +25,8 @@ const Footer = () => {
                 <ListElement>
                     <Link to="/privacy">Privacy</Link>
                 </ListElement>
-            </ul>
-            <ul className="flex text-2xl">
+            </List>
+            <List className="flex text-2xl">
                 <ListElement>
                     <ExternalLink
                         href="https://github.com/marbirk"
@@ -49,15 +51,9 @@ const Footer = () => {
                         <IoLogoXing />
                     </ExternalLink>
                 </ListElement>
-            </ul>
+            </List>
         </footer>
     )
 }
-
-const ListElement = ({ children, ...props }) => (
-    <li className="pr-2 pl-2" {...props}>
-        {children}
-    </li>
-)
 
 export default Footer
