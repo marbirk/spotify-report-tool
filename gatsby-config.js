@@ -60,5 +60,22 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-cookiehub-banner`,
+            options: {
+                // The ID is part of the CookieHub URL: https://cookiehub.net/cc/YOUR_COOKIEHUB_ID.js
+                cookieHubId: '3310b0ee',
+                // Optional parameter (default false) - Use new v2 API.
+                cookieHubV2Api: true,
+                // Categories configured with CookieHub
+                categories: [
+                    {
+                        categoryName: 'analytics', // Unique id of the category which is set by Cookiehub.
+                        cookieName:
+                            'gatsby-plugin-google-analytics-gdpr_cookies-enabled', // Your custom cookie name
+                    },
+                ],
+            },
+        },
     ],
 }
