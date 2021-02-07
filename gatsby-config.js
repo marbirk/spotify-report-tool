@@ -10,6 +10,7 @@ module.exports = {
         title: 'Marcel Birkhahn',
         description: 'This is me!',
         keywords: ['Portfolio', 'Frontend Engineer'],
+        siteUrl: `https://marcelbirkhahn.com/`,
     },
     flags: {
         PRESERVE_FILE_DOWNLOAD_CACHE: true,
@@ -22,6 +23,7 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-json`,
+        `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
