@@ -31,6 +31,22 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-custom-api',
+            options: {
+                url:
+                    'https://verbena-sulfuric-catcher.glitch.me/graphql?query=query%20%7B%0A%20%20allContacts%20%7B%0A%20%20%20%20name%0A%20%20%20%20web%0A%20%20%20%20active%0A%20%20%20%20tags%0A%20%20%7D%0A%7D%0A%0A',
+                rootKey: 'contacts',
+                schemas: {
+                    contacts: `
+                        name: String
+                        web: String
+                        active: Boolean
+                        tags: [String]
+                    `,
+                },
+            },
+        },
+        {
             resolve: `gatsby-source-spotify`,
             options: {
                 clientId: `aadcee04e02d42bd9c6b3e3b96de851f`,
