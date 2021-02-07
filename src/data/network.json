@@ -58,5 +58,11 @@
         "web": "https://500px.com/p/bjoernbirkhahn?view=photos",
         "active": true,
         "tags": ["photography"]
+    },
+    {
+        "name": "Simon Schmalfeld",
+        "web": "https://www.linkedin.com/in/simonschmalfeld/",
+        "active": true,
+        "tags": ["web design", "frontend"]
     }
 ]

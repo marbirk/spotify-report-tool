@@ -63,13 +63,14 @@ const HomePage = (props: HomePageProps) => {
             </Helmet>
             <section>
                 <p>
-                    My job as a Frontend Engineer (B.Sc.) for{' '}
+                    I live near Hamburg and work in the city. My job as a
+                    Frontend Engineer (B.Sc.) for{' '}
                     <ExternalLink href="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
                     </ExternalLink>{' '}
                     combines two passions of me. I love music and I'm fascinated
-                    of modern web technologies. Steinberg, based in Hamburg and
-                    part of Yamaha Corporation, is well known for its{' '}
+                    of modern web technologies. Steinberg, as a part of Yamaha
+                    Corporation, is well known for its{' '}
                     <ExternalLink href="https://de.wikipedia.org/wiki/Cubase">
                         Digital Audio Workstation Cubase
                     </ExternalLink>
@@ -79,10 +80,11 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    Next to my job I'm doing studies of media informatics
-                    (M.Sc.) at TH Lübeck. User experience, modern software
+                    Next to my job I'm doing studies of computer science and
+                    media applications (M.Sc.) at Technical University of
+                    Applied Sciences Lübeck. User experience, modern software
                     development, clean coding and data science are part of my
-                    master degree. My last university project was formed in
+                    master degree. My last scientific project was formed in
                     corporation with Steinberg. It was a interdisciplinary
                     project with focus on persona methods, web analytics and
                     data science approaches:
@@ -95,7 +97,11 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    Discover my <Link to="/network">network</Link>
+                    During the last years of studing and working in several
+                    different projects I've crossed the way of talented people,
+                    which loves what they do. Check out{' '}
+                    <Link to="/network">network page</Link> to discover their
+                    passions.
                 </p>
             </section>
             <section>
@@ -108,9 +114,9 @@ const HomePage = (props: HomePageProps) => {
                     {renderBandList()}
                 </div>
             </section>
-            Unit tests?, font for headline and text?, filter to network?,
-            Privacy-Text, Cookie Consent, Favicons, Dark mode switch klassen mit
-            tailwind, gatsby-plugin-mdx?, Google Analytics?
+            Unit tests?, font for headline and text?, filter to network?, API
+            for network, Privacy-Text, Favicons, Dark mode switch klassen mit
+            tailwind, gatsby-plugin-mdx?, Sitemap, Content über contentful
         </Layout>
     )
 
