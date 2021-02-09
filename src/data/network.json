@@ -64,5 +64,11 @@
         "web": "https://www.linkedin.com/in/simonschmalfeld/",
         "active": true,
         "tags": ["web design", "frontend"]
+    },
+    {
+        "name": "Jennifer Nadolski",
+        "web": "https://www.jnadolski.com/",
+        "active": false,
+        "tags": ["editor", "journalism"]
     }
 ]

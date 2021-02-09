@@ -98,10 +98,11 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     During the last years of studing and working in several
-                    different projects I've crossed the way of talented people,
-                    which loves what they do. Check out{' '}
+                    different projects I've crossed the way of many talented
+                    people, which loves what they do. Many of them turned into
+                    good friends. Check out the{' '}
                     <Link to="/network">network page</Link> to discover their
-                    passions.
+                    passions and creative skills.
                 </p>
             </section>
             <section>
