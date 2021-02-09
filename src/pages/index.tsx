@@ -106,9 +106,10 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    While I'm working I listen to music every day and I'm always
-                    interested in new bands. The following list contains my
-                    current favourite artists:
+                    While I'm working I listen to music every day. Mainly I like
+                    punk, ska, metal and reggea, but I'm always interested in
+                    new bands and genres. The following list contains my current
+                    favourite artists:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16">
                     {renderBandList()}
