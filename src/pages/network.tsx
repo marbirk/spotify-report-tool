@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, PageProps } from 'gatsby'
 import ExternalLink from '../components/ExternalLink'
+import Grid from '../components/Grid'
 
 interface NetworkPageProps extends PageProps {
     data: {
@@ -25,9 +26,7 @@ const NetworkPage = (props: NetworkPageProps) => {
     return (
         <Layout location={props.location}>
             <h2>Network</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {renderNetworkList()}
-            </div>
+            <Grid>{renderNetworkList()}</Grid>
         </Layout>
     )
 

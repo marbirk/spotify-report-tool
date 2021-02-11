@@ -4,6 +4,7 @@ import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/ExternalLink'
+import Grid from '../components/Grid'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -109,12 +110,10 @@ const HomePage = (props: HomePageProps) => {
                 <p>
                     While I'm working I listen to music every day. Mainly I like
                     punk, ska, metal and reggea, but I'm always interested in
-                    new bands and genres. The following list contains my current
-                    favourite artists:
+                    new bands and extraordinary genres. The following list
+                    contains my current favourite artists on spotify:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-16">
-                    {renderBandList()}
-                </div>
+                <Grid>{renderBandList()}</Grid>
             </section>
             Unit tests?, font for headline and text?, filter to network?,
             improve contact endpoint url and connect to app, Privacy-Text,
