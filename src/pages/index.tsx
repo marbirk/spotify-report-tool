@@ -131,6 +131,7 @@ const HomePage = (props: HomePageProps) => {
                     className="bg-gray-200 dark:bg-gray-700 capitalize p-4"
                 >
                     <Img
+                        className="u-ratio-square"
                         fluid={
                             artist.node.image.localFile.childImageSharp.fluid
                         }
@@ -156,7 +157,7 @@ export const query = graphql`
                 keywords
             }
         }
-        allSpotifyTopArtist(sort: { fields: order }, limit: 5) {
+        allSpotifyTopArtist(sort: { fields: order }, limit: 6) {
             edges {
                 node {
                     name

@@ -8,7 +8,7 @@ const HeadlineBanner = (props: Location) => {
     return (
         <div className="mb-32 mt-24">
             <Link to="/">
-                <h1 className="squishy-text">
+                <h1 className="u-squishy-text">
                     {isStartPage ? getStartPageBanner() : getDefaultBanner()}
                 </h1>
             </Link>

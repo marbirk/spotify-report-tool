@@ -1,8 +1,12 @@
-.squishy-text {
+.u-squishy-text {
     word-break: break-word; /* Samsung browser */
     word-wrap: break-word; /* IE 11 */
     overflow-wrap: anywhere;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+}
+
+.u-ratio-square {
+    aspect-ratio: 1 / 1;
 }
