@@ -4,6 +4,16 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const activeContactsQuery = `
+    query {
+        allActiveContacts {
+            name
+            web
+            tags
+        }
+    }
+`
+
 module.exports = {
     /* Your site config here */
     siteMetadata: {
@@ -33,17 +43,7 @@ module.exports = {
         {
             resolve: 'gatsby-source-custom-api',
             options: {
-                url:
-                    'https://verbena-sulfuric-catcher.glitch.me/graphql?query=query%20%7B%0A%20%20allContacts%20%7B%0A%20%20%20%20name%0A%20%20%20%20web%0A%20%20%20%20active%0A%20%20%20%20tags%0A%20%20%7D%0A%7D%0A%0A',
-                rootKey: 'contacts',
-                schemas: {
-                    contacts: `
-                        name: String
-                        web: String
-                        active: Boolean
-                        tags: [String]
-                    `,
-                },
+                url: `https://indigo-colossal-fibre.glitch.me/graphql?query=${activeContactsQuery}`,
             },
         },
         {

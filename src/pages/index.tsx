@@ -116,9 +116,9 @@ const HomePage = (props: HomePageProps) => {
                 <Grid>{renderBandList()}</Grid>
             </section>
             Unit tests?, font for headline and text?, filter to network?,
-            improve contact endpoint url and connect to app, Privacy-Text,
-            Favicons, Dark mode switch klassen mit tailwind, gatsby-plugin-mdx?,
-            Content über contentful?, Offline Support?, Manifest?
+            Privacy-Text, Favicons, Dark mode switch klassen mit tailwind,
+            gatsby-plugin-mdx?, Content über contentful?, Offline Support?,
+            Manifest?
         </Layout>
     )
 

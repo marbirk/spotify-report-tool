@@ -6,20 +6,20 @@ import Grid from '../components/Grid'
 
 interface NetworkPageProps extends PageProps {
     data: {
-        allNetworkJson: {
-            edges: Array<ContactProps>
+        customApi: {
+            data: {
+                allActiveContacts: Array<ContactProps>
+            }
         }
     }
 }
 
 interface ContactProps {
-    node: {
-        name: string
-        id: string
-        active: boolean
-        web: string
-        tags: Array<string>
-    }
+    name: string
+    id: string
+    active: boolean
+    web: string
+    tags: Array<string>
 }
 
 const NetworkPage = (props: NetworkPageProps) => {
@@ -31,22 +31,20 @@ const NetworkPage = (props: NetworkPageProps) => {
     )
 
     function renderNetworkList() {
-        return props.data.allNetworkJson.edges
-            .filter(contact => contact.node.active)
-            .sort((a, b) => a.node.name.localeCompare(b.node.name))
-            .map(contact => {
+        return props.data.customApi.data.allActiveContacts
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((contact, index) => {
+                console.log(contact)
                 return (
                     <ExternalLink
-                        key={contact.node.id}
-                        href={contact.node.web}
+                        key={index}
+                        href={contact.web}
                         className="w-full h-32 bg-gray-200 dark:bg-gray-700 p-4"
                     >
-                        {getInitials(contact.node.name)}
+                        {getInitials(contact.name)}
                         <div className="mt-4">
-                            <p>{contact.node.name}</p>
-                            <p className="text-xs">
-                                {contact.node.tags.toString()}
-                            </p>
+                            <p>{contact.name}</p>
+                            <p className="text-xs">{contact.tags.toString()}</p>
                         </div>
                     </ExternalLink>
                 )
@@ -64,14 +62,12 @@ const NetworkPage = (props: NetworkPageProps) => {
 
 export const query = graphql`
     query NetworkPageQuery {
-        allNetworkJson {
-            edges {
-                node {
+        customApi {
+            data {
+                allActiveContacts {
                     name
-                    id
-                    active
-                    web
                     tags
+                    web
                 }
             }
         }
