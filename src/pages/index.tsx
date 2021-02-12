@@ -64,8 +64,8 @@ const HomePage = (props: HomePageProps) => {
             </Helmet>
             <section>
                 <p>
-                    I live near Hamburg and work in the city. My job as a
-                    Frontend Engineer (B.Sc.) for{' '}
+                    I live next to Hamburg. My job as a Frontend Engineer
+                    (B.Sc.) for{' '}
                     <ExternalLink href="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
                     </ExternalLink>{' '}
