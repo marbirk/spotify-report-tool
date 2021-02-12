@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body.dark a {
+body.dark a,
+body.dark footer svg:hover {
     @apply text-highlight-300;
 }
 
-a {
+a,
+footer svg:hover {
     @apply text-highlight-600;
 }
 

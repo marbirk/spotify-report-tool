@@ -8,6 +8,7 @@ import List from './List'
 const Footer = () => {
     const currentYear = new Date().getFullYear()
     const marginBottom = 'mb-4'
+    const iconClasses = 'text-gray-800 dark:text-gray-200'
     return (
         <footer className="flex flex-col items-center mt-24 mb-16">
             <p className={`text-center ${marginBottom}`}>
@@ -28,27 +29,18 @@ const Footer = () => {
             </List>
             <List className="flex text-2xl">
                 <ListElement>
-                    <ExternalLink
-                        href="https://github.com/marbirk"
-                        className="text-gray-800 dark:text-gray-200"
-                    >
-                        <IoLogoGithub />
+                    <ExternalLink href="https://github.com/marbirk">
+                        <IoLogoGithub className={iconClasses} />
                     </ExternalLink>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink
-                        href="https://twitter.com/MBirkhahn"
-                        className="text-gray-800 dark:text-gray-200"
-                    >
-                        <IoLogoTwitter />
+                    <ExternalLink href="https://twitter.com/MBirkhahn">
+                        <IoLogoTwitter className={iconClasses} />
                     </ExternalLink>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink
-                        href="https://www.xing.com/profile/Marcel_Birkhahn/cv"
-                        className="text-gray-800 dark:text-gray-200"
-                    >
-                        <IoLogoXing />
+                    <ExternalLink href="https://www.xing.com/profile/Marcel_Birkhahn/cv">
+                        <IoLogoXing className={iconClasses} />
                     </ExternalLink>
                 </ListElement>
             </List>
