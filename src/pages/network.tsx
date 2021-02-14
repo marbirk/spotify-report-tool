@@ -42,7 +42,7 @@ const NetworkPage = (props: NetworkPageProps) => {
                         href={contact.node.web}
                         className="w-full bg-gray-200 dark:bg-gray-700 p-8 h-auto"
                     >
-                        <div className="u-ratio-square bg-gray-200 dark:bg-gray-200 text-gray-50 flex items-center justify-center overflow-hidden u-dynamic-font-size">
+                        <div className="u-ratio-square bg-gray-400 dark:bg-gray-800 text-gray-200 dark:text-gray-700 flex items-center justify-center overflow-hidden u-dynamic-font-size">
                             {getInitials(contact.node.name.toUpperCase())}
                         </div>
                         <div className="mt-4">
