@@ -70,9 +70,9 @@ const HomePage = (props: HomePageProps) => {
                     <ExternalLink href="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
                     </ExternalLink>{' '}
-                    combines two passions of me. I love music and I'm fascinated
-                    of modern web technologies. Steinberg, as a part of Yamaha
-                    Corporation, is well known for its{' '}
+                    combines two passions of me. I love everything around music
+                    and I'm fascinated of modern web technologies. Steinberg, as
+                    a part of Yamaha Corporation, is well known for its{' '}
                     <ExternalLink href="https://de.wikipedia.org/wiki/Cubase">
                         Digital Audio Workstation Cubase
                     </ExternalLink>
