@@ -6,20 +6,20 @@ import Grid from '../components/Grid'
 
 interface NetworkPageProps extends PageProps {
     data: {
-        customApi: {
-            data: {
-                allActiveContacts: Array<ContactProps>
-            }
+        allCustomApi: {
+            edges: Array<ContactProps>
         }
     }
 }
 
 interface ContactProps {
-    name: string
-    id: string
-    active: boolean
-    web: string
-    tags: Array<string>
+    node: {
+        name: string
+        id: string
+        active: boolean
+        web: string
+        tags: Array<string>
+    }
 }
 
 const NetworkPage = (props: NetworkPageProps) => {
@@ -31,20 +31,22 @@ const NetworkPage = (props: NetworkPageProps) => {
     )
 
     function renderNetworkList() {
-        return props.data.customApi.data.allActiveContacts
-            .sort((a, b) => a.name.localeCompare(b.name))
+        return props.data.allCustomApi.edges
+            .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map((contact, index) => {
                 console.log(contact)
                 return (
                     <ExternalLink
                         key={index}
-                        href={contact.web}
+                        href={contact.node.web}
                         className="w-full h-32 bg-gray-200 dark:bg-gray-700 p-4"
                     >
-                        {getInitials(contact.name)}
+                        {getInitials(contact.node.name)}
                         <div className="mt-4">
-                            <p>{contact.name}</p>
-                            <p className="text-xs">{contact.tags.toString()}</p>
+                            <p>{contact.node.name}</p>
+                            <p className="text-xs">
+                                {contact.node.tags.toString()}
+                            </p>
                         </div>
                     </ExternalLink>
                 )
@@ -62,9 +64,9 @@ const NetworkPage = (props: NetworkPageProps) => {
 
 export const query = graphql`
     query NetworkPageQuery {
-        customApi {
-            data {
-                allActiveContacts {
+        allCustomApi(filter: { active: { eq: true } }) {
+            edges {
+                node {
                     name
                     tags
                     web

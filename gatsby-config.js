@@ -4,16 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-const activeContactsQuery = `
-    query {
-        allActiveContacts {
-            name
-            web
-            tags
-        }
-    }
-`
-
 module.exports = {
     /* Your site config here */
     siteMetadata: {
@@ -43,7 +33,7 @@ module.exports = {
         {
             resolve: 'gatsby-source-custom-api',
             options: {
-                url: `https://indigo-colossal-fibre.glitch.me/graphql?query=${activeContactsQuery}`,
+                url: `https://602935da289eb50017cf7796.mockapi.io/contacts/`,
             },
         },
         {
