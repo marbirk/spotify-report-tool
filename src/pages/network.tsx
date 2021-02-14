@@ -48,7 +48,7 @@ const NetworkPage = (props: NetworkPageProps) => {
                         <div className="mt-4">
                             <p>{contact.node.name}</p>
                             <p className="text-xs">
-                                {contact.node.tags.toString()}
+                                {getTags(contact.node.tags)}
                             </p>
                         </div>
                     </ExternalLink>
@@ -62,6 +62,16 @@ const NetworkPage = (props: NetworkPageProps) => {
             initials += element[0]
         })
         return initials
+    }
+
+    function getTags(tags: Array<string>) {
+        return tags.map((tag, number) => {
+            return (
+                <span key={number} className="mr-4">
+                    {tag.toLowerCase()}
+                </span>
+            )
+        })
     }
 }
 
