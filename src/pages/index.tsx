@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/ExternalLink'
 import Grid from '../components/Grid'
+import { networkText } from './network'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -98,12 +99,9 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    During the last years of studing and working in several
-                    different projects I've crossed the way of many talented
-                    people, which loves what they do. Many of them turned into
-                    good friends. Check out the{' '}
-                    <Link to="/network">network page</Link> to discover their
-                    passions and creative skills.
+                    {networkText}{' '}
+                    <Link to="/network">Check out the network page</Link> to
+                    discover their passions and creative skills.
                 </p>
             </section>
             <section>
@@ -127,7 +125,7 @@ const HomePage = (props: HomePageProps) => {
             return (
                 <div
                     key={artist.node.id}
-                    className="bg-gray-200 dark:bg-gray-700 capitalize p-4"
+                    className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
                 >
                     <Img
                         className="u-ratio-square"

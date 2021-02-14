@@ -10,3 +10,15 @@
 .u-ratio-square {
     aspect-ratio: 1 / 1;
 }
+
+@media (max-width: 768px) {
+    .u-dynamic-font-size {
+        font-size: calc(100vw / 1.8);
+    }
+}
+
+@media (min-width: 768px) {
+    .u-dynamic-font-size {
+        font-size: 300px;
+    }
+}
