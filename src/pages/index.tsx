@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/ExternalLink'
 import Grid from '../components/Grid'
+import HighlightedText from '../components/HighlightedText'
 import { networkText } from './network'
 
 interface HomePageProps extends PageProps {
@@ -91,11 +92,11 @@ const HomePage = (props: HomePageProps) => {
                     project with focus on persona methods, web analytics and
                     data science approaches:
                 </p>
-                <p className="p-10">
+                <HighlightedText>
                     Personas in e-commerce - evaluation of the data-driven
                     persona method as a basis for product recommendations in
                     online retail for customers with musical interest
-                </p>
+                </HighlightedText>
             </section>
             <section>
                 <p>
@@ -116,7 +117,7 @@ const HomePage = (props: HomePageProps) => {
             Unit tests?, font for headline and text?, filter to network?,
             Privacy-Text, Favicons, Dark mode switch klassen mit tailwind,
             gatsby-plugin-mdx?, Content über contentful?, Offline Support?,
-            Manifest?
+            Manifest?, use own graphql api with firebase database
         </Layout>
     )
 
