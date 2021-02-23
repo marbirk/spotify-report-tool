@@ -83,9 +83,9 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    Next to my job I'm doing studies of computer science and
-                    media applications (M.Sc.) at Technical University of
-                    Applied Sciences Lübeck. User experience, modern software
+                    Next to my job I'm doing my M.Sc. degree of computer science
+                    and media applications at Technical University of Applied
+                    Sciences Lübeck. User experience, modern software
                     development, clean coding and data science are part of my
                     master degree. My last scientific project was formed in
                     corporation with Steinberg. It was a interdisciplinary
