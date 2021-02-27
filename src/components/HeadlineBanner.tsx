@@ -28,6 +28,7 @@ const getStartPageBanner = () => {
                         'Frontend Engineer',
                         'Studying IT Master',
                         'Hard Rock Fan',
+                        'Nature Lover',
                     ],
                     autoStart: true,
                     loop: true,
