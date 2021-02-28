@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders correctly 1`] = `
+<div>
+  <ul>
+    <li>
+      entry 1
+    </li>
+    <li>
+      entry 2
+    </li>
+    <li>
+      entry 3
+    </li>
+  </ul>
+</div>
+`;
