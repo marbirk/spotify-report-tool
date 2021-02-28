@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 import ExternalLink from './ExternalLink'
 import ListElement from './ListElement'
-import List from './List'
+import List from './list/List'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()

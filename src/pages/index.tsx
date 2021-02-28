@@ -114,10 +114,11 @@ const HomePage = (props: HomePageProps) => {
                 </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
-            Unit tests?, font for headline and text?, filter to network?,
-            Privacy-Text, Favicons, Dark mode switch klassen mit tailwind,
-            gatsby-plugin-mdx?, Content über contentful?, Offline Support?,
-            Manifest?, use own graphql api with firebase database
+            - Unit tests? - Storybook - Cypress - Applitools? - font for
+            headline and text? - filter to network? - Privacy-Text - Favicons -
+            Dark mode switch klassen mit tailwind - gatsby-plugin-mdx? - Content
+            über contentful?- - Offline Support? - Manifest? - use own graphql
+            api with firebase database
         </Layout>
     )
 
