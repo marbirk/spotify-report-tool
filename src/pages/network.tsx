@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, PageProps } from 'gatsby'
-import ExternalLink from '../components/ExternalLink'
+import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/Grid'
 
 interface NetworkPageProps extends PageProps {

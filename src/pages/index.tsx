@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
-import ExternalLink from '../components/ExternalLink'
+import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/Grid'
 import HighlightedText from '../components/HighlightedText'
 import { networkText } from './network'
@@ -107,10 +107,10 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    While I'm working I listen to music every day. Mainly I like
-                    punk, ska, metal and reggea, but I'm always interested in
-                    new bands and extraordinary genres. The following list
-                    contains my current favourite artists on spotify:
+                    While I'm coding I listen to music every day. Mainly I like
+                    punk, ska and metal, but I'm always interested in new bands
+                    and extraordinary genres. The following list contains my
+                    current favourite artists on spotify:
                 </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
