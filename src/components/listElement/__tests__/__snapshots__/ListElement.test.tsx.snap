@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListElement renders correctly 1`] = `
+<div>
+  <li
+    class="pr-2 pl-2"
+  >
+    List Element
+  </li>
+</div>
+`;

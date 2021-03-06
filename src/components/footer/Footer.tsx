@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 import ExternalLink from '../externalLink/ExternalLink'
-import ListElement from '../ListElement'
+import ListElement from '../listElement/ListElement'
 import List from '../list/List'
 
 const Footer = () => {
