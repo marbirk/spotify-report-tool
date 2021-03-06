@@ -14,7 +14,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "test:coverage": "npm test -- --coverage",
+    "test:coverage": "npm test -- --coverage --runInBand",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
