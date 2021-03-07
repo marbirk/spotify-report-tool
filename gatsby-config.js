@@ -48,7 +48,7 @@ module.exports = {
                 timeRanges: ['short_term'], // optional. Set time ranges to be fetched
             },
         },
-        {
+        /* {
             resolve: `gatsby-plugin-google-analytics-gdpr`,
             options: {
                 // The property ID; the tracking code won't be generated without it.
@@ -67,8 +67,8 @@ module.exports = {
                     },
                 },
             },
-        },
-        {
+        }, */
+        /* {
             resolve: `gatsby-plugin-cookiehub-banner`,
             options: {
                 // The ID is part of the CookieHub URL: https://cookiehub.net/cc/YOUR_COOKIEHUB_ID.js
@@ -84,6 +84,6 @@ module.exports = {
                     },
                 ],
             },
-        },
+        }, */
     ],
 }
