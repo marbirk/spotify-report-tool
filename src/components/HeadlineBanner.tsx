@@ -36,6 +36,9 @@ const getStartPageBanner = () => {
                         .typeString('Hard Rock Fan')
                         .start()
                 }}
+                options={{
+                    loop: true,
+                }}
             />
         </>
     )
