@@ -35,7 +35,6 @@ const NetworkPage = (props: NetworkPageProps) => {
         return props.data.allCustomApi.edges
             .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map((contact, index) => {
-                console.log(contact)
                 return (
                     <ExternalLink
                         key={index}
