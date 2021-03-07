@@ -1,10 +1,9 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { PageProps } from 'gatsby'
 
-const PrivacyPage = (props: PageProps) => {
+const PrivacyPage = () => {
     return (
-        <Layout location={props.location}>
+        <Layout>
             <h2>Privacy</h2>
         </Layout>
     )

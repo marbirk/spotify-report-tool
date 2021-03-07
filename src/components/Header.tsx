@@ -1,13 +1,12 @@
 import React from 'react'
 import DarkModeToggle from './DarkModeToggle'
 import HeadlineBanner from './HeadlineBanner'
-import { Location } from '../utils/types'
 
-export default function Header(props: Location) {
+export default function Header() {
     return (
         <header className="flex flex-col">
             <DarkModeToggle />
-            <HeadlineBanner {...props} />
+            <HeadlineBanner pathname={location.pathname} />
         </header>
     )
 }

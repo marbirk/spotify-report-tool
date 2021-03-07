@@ -1,10 +1,13 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import { Link } from 'gatsby'
-import { Location } from '../utils/types'
 
-const HeadlineBanner = (props: Location) => {
-    const isStartPage = props.pathname.length === 1
+interface HeadlineBannerProps {
+    pathname: string
+}
+
+const HeadlineBanner = ({ pathname }: HeadlineBannerProps) => {
+    const isStartPage = pathname.length === 1
     return (
         <div className="mb-32 mt-24">
             <Link to="/">

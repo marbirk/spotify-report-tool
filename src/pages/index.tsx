@@ -51,7 +51,7 @@ interface SpotifyTopArtistProps {
 const HomePage = (props: HomePageProps) => {
     const { title, description, keywords } = props.data.site.siteMetadata
     return (
-        <Layout location={props.location}>
+        <Layout>
             <Helmet
                 title={`Home | ${title}`}
                 meta={[
