@@ -24,17 +24,17 @@ const getStartPageBanner = () => {
         <>
             <span>I am</span>
             <Typewriter
-                onInit={() => {}}
-                options={{
-                    strings: [
-                        'Marcel Birkhahn',
-                        'Frontend Engineer',
-                        'Studying IT Master',
-                        'Hard Rock Fan',
-                        'Nature Lover',
-                    ],
-                    autoStart: true,
-                    loop: true,
+                onInit={typewriter => {
+                    typewriter
+                        .pauseFor(2500)
+                        .typeString('Marcel Birkhahn')
+                        .deleteAll()
+                        .typeString('Frontend Engineer')
+                        .deleteAll()
+                        .typeString('Studying IT Master')
+                        .deleteAll()
+                        .typeString('Hard Rock Fan')
+                        .start()
                 }}
             />
         </>
