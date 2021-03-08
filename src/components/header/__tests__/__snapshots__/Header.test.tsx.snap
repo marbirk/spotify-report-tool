@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div>
+  <header
+    class="flex flex-col"
+  >
+    <div
+      class="flex mt-0 ml-auto dark-mode-toggle"
+    >
+      <button
+        class="text-lg"
+        type="button"
+      >
+        ☀
+      </button>
+      <span
+        class="flex relative items-center pt-0 pr-1 pl-1"
+      >
+        <input
+          class="bg-gray-500 relative w-10 h-3 rounded-md cursor-pointer appearance-none outline-none dmcheck"
+          id="dmcheck"
+          type="checkbox"
+        />
+        <label
+          for="dmcheck"
+        />
+      </span>
+      <button
+        class="text-lg"
+        type="button"
+      >
+        ☾
+      </button>
+    </div>
+    <div
+      class="mb-32 mt-24"
+    >
+      <a
+        href="/"
+      >
+        <h1
+          class="u-squishy-text"
+        >
+          <span>
+            I am
+          </span>
+          <div
+            class="Typewriter"
+            data-testid="typewriter-wrapper"
+          >
+            <span
+              class="Typewriter__wrapper"
+            />
+            <span
+              class="Typewriter__cursor"
+            >
+              |
+            </span>
+          </div>
+        </h1>
+      </a>
+    </div>
+  </header>
+</div>
+`;
