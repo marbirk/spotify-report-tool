@@ -13,6 +13,7 @@ const Toggle = ({ checked, onChange }: ToggleProps) => (
             checked={checked}
             onChange={onChange}
             id="dmcheck"
+            data-testid="toggle"
         />
         <label htmlFor="dmcheck" />
     </span>

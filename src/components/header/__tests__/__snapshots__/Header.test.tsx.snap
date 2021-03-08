@@ -19,6 +19,7 @@ exports[`Header renders correctly 1`] = `
       >
         <input
           class="bg-gray-500 relative w-10 h-3 rounded-md cursor-pointer appearance-none outline-none dmcheck"
+          data-testid="toggle"
           id="dmcheck"
           type="checkbox"
         />
