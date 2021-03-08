@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import ExternalLink from '../ExternalLink'
+import ExternalLink from './ExternalLink'
 
 describe('ExternalLink', () => {
     test('renders correctly', () => {

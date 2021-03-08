@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import List from '../List'
+import List from './List'
 
 describe('List', () => {
     const entries = ['entry 1', 'entry 2', 'entry 3']
