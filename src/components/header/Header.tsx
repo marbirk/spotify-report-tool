@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkModeToggle from '../DarkModeToggle'
+import DarkModeToggle from '../darkModeToggle/DarkModeToggle'
 import HeadlineBanner from '../headlineBanner/HeadlineBanner'
 
 export default function Header() {

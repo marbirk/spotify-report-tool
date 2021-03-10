@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/grid/Grid'
-import HighlightedText from '../components/HighlightedText'
+import HighlightedText from '../components/highlightedText/HighlightedText'
 import { networkText } from './network'
 
 interface HomePageProps extends PageProps {

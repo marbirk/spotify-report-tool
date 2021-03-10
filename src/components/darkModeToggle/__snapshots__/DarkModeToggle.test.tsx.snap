@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DarkModeToggle renders correctly 1`] = `
+<div>
+  <div
+    class="flex mt-0 ml-auto dark-mode-toggle"
+  >
+    <button
+      class="text-lg"
+      type="button"
+    >
+      ☀
+    </button>
+    <span
+      class="flex relative items-center pt-0 pr-1 pl-1"
+    >
+      <input
+        class="bg-gray-500 relative w-10 h-3 rounded-md cursor-pointer appearance-none outline-none dmcheck"
+        data-testid="toggle"
+        id="dmcheck"
+        type="checkbox"
+      />
+      <label
+        for="dmcheck"
+      />
+    </span>
+    <button
+      class="text-lg"
+      type="button"
+    >
+      ☾
+    </button>
+  </div>
+</div>
+`;

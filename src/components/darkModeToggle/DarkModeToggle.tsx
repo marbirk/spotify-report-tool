@@ -1,6 +1,6 @@
 import React from 'react'
 import useDarkMode from 'use-dark-mode'
-import Toggle from './toggle/Toggle'
+import Toggle from '../toggle/Toggle'
 
 const DarkModeToggle = () => {
     const darkModeConfig = {
