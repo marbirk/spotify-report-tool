@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/Grid'

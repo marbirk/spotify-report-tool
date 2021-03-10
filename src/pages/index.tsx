@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
