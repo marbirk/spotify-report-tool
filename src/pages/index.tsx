@@ -4,7 +4,7 @@ import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/externalLink/ExternalLink'
-import Grid from '../components/Grid'
+import Grid from '../components/grid/Grid'
 import HighlightedText from '../components/HighlightedText'
 import { networkText } from './network'
 

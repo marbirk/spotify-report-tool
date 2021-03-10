@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid renders correctly 1`] = `
+<div>
+  <div
+    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6"
+  >
+    Grid children
+  </div>
+</div>
+`;
