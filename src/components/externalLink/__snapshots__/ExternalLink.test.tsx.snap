@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ExternalLink renders correctly 1`] = `
-<div>
-  <a
-    href="https://test-url.de"
-    rel="noreferrer noopener"
-    target="_blank"
-  >
-    External Link
-  </a>
-</div>
+<a
+  href="https://test-url.de"
+  rel="noreferrer noopener"
+  target="_blank"
+>
+  External Link
+</a>
 `;

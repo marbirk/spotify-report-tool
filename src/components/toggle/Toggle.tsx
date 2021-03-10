@@ -6,14 +6,16 @@ interface ToggleProps {
 }
 
 const Toggle = ({ checked, onChange }: ToggleProps) => (
-    <span className="flex relative items-center pt-0 pr-1 pl-1">
+    <span
+        className="flex relative items-center pt-0 pr-1 pl-1"
+        data-testid="toggle"
+    >
         <input
             className="bg-gray-500 relative w-10 h-3 rounded-md cursor-pointer appearance-none outline-none dmcheck"
             type="checkbox"
             checked={checked}
             onChange={onChange}
             id="dmcheck"
-            data-testid="toggle"
         />
         <label htmlFor="dmcheck" />
     </span>

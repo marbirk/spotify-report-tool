@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HighlightedText renders correctly 1`] = `
-<div>
-  <div
-    class="pl-8 pr-8 mt-8 mb-8 border-l-4 border-highlight-600 dark:border-highlight-300 italic"
-  >
-    Highlighted Text
-  </div>
+<div
+  class="pl-8 pr-8 mt-8 mb-8 border-l-4 border-highlight-600 dark:border-highlight-300 italic"
+>
+  Highlighted Text
 </div>
 `;

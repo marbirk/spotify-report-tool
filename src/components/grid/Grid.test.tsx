@@ -1,12 +1,13 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import Grid from './Grid'
 
 describe('Grid', () => {
     test('renders correctly', () => {
-        const { container, getByText } = render(<Grid>Grid children</Grid>)
-        expect(getByText('Grid children')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        render(<Grid>Grid children</Grid>)
+        const component = screen.getByText('Grid children')
+        expect(component).toBeInTheDocument()
+        expect(component).toMatchSnapshot()
     })
 })

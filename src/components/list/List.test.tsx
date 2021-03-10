@@ -1,19 +1,20 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import List from './List'
 
 describe('List', () => {
     const entries = ['entry 1', 'entry 2', 'entry 3']
     test('renders correctly', () => {
-        const { container, getByText } = render(
+        render(
             <List>
                 {entries.map(item => (
                     <li key={item}>{item}</li>
                 ))}
             </List>
         )
-        expect(getByText('entry 1')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        const component = screen.getByText('entry 1')
+        expect(component).toBeInTheDocument()
+        expect(component.parentNode).toMatchSnapshot()
     })
 })

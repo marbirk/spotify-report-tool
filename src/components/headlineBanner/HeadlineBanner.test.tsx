@@ -1,19 +1,19 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import HeadlineBanner from './HeadlineBanner'
 
 describe('HeadlineBanner', () => {
     test('renders on home correctly', () => {
-        const { container, getByText } = render(<HeadlineBanner pathname="/" />)
-        expect(getByText('I am')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        render(<HeadlineBanner pathname="/" />)
+        const component = screen.getByTestId('headline-banner')
+        expect(component).toBeInTheDocument()
+        expect(component).toMatchSnapshot()
     })
     test('renders on other pages correctly', () => {
-        const { container, getByText } = render(
-            <HeadlineBanner pathname="/about" />
-        )
-        expect(getByText('Marcel')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        render(<HeadlineBanner pathname="/about" />)
+        const component = screen.getByTestId('headline-banner')
+        expect(component).toBeInTheDocument()
+        expect(component).toMatchSnapshot()
     })
 })

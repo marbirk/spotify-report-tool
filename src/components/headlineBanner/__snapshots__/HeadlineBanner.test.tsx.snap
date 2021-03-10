@@ -1,61 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeadlineBanner renders on home correctly 1`] = `
-<div>
-  <div
-    class="mb-32 mt-24"
+<div
+  class="mb-32 mt-24"
+  data-testid="headline-banner"
+>
+  <a
+    href="/"
   >
-    <a
-      href="/"
+    <h1
+      class="u-squishy-text"
     >
-      <h1
-        class="u-squishy-text"
+      <span>
+        I am
+      </span>
+      <div
+        class="Typewriter"
+        data-testid="typewriter-wrapper"
       >
-        <span>
-          I am
-        </span>
-        <div
-          class="Typewriter"
-          data-testid="typewriter-wrapper"
+        <span
+          class="Typewriter__wrapper"
+        />
+        <span
+          class="Typewriter__cursor"
         >
-          <span
-            class="Typewriter__wrapper"
-          />
-          <span
-            class="Typewriter__cursor"
-          >
-            |
-          </span>
-        </div>
-      </h1>
-    </a>
-  </div>
+          |
+        </span>
+      </div>
+    </h1>
+  </a>
 </div>
 `;
 
 exports[`HeadlineBanner renders on other pages correctly 1`] = `
-<div>
-  <div
-    class="mb-32 mt-24"
+<div
+  class="mb-32 mt-24"
+  data-testid="headline-banner"
+>
+  <a
+    href="/"
   >
-    <a
-      href="/"
+    <h1
+      class="u-squishy-text"
     >
-      <h1
-        class="u-squishy-text"
+      <span
+        class="block"
       >
-        <span
-          class="block"
-        >
-          Marcel
-        </span>
-        <span
-          class="block"
-        >
-          Birkhahn
-        </span>
-      </h1>
-    </a>
-  </div>
+        Marcel
+      </span>
+      <span
+        class="block"
+      >
+        Birkhahn
+      </span>
+    </h1>
+  </a>
 </div>
 `;

@@ -10,7 +10,10 @@ const Footer = () => {
     const marginBottom = 'mb-4'
     const iconClasses = 'text-gray-800 dark:text-gray-200'
     return (
-        <footer className="flex flex-col items-center mt-24 mb-16">
+        <footer
+            className="flex flex-col items-center mt-24 mb-16"
+            data-testid="footer"
+        >
             <p className={`text-center ${marginBottom}`}>
                 © {currentYear} Marcel Birkhahn. All rights reserved.
             </p>

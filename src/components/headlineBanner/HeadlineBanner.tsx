@@ -9,7 +9,7 @@ interface HeadlineBannerProps {
 const HeadlineBanner = ({ pathname }: HeadlineBannerProps) => {
     const isStartPage = pathname.length === 1
     return (
-        <div className="mb-32 mt-24">
+        <div className="mb-32 mt-24" data-testid="headline-banner">
             <Link to="/">
                 <h1 className="u-squishy-text">
                     {isStartPage ? getStartPageBanner() : getDefaultBanner()}

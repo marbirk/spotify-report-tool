@@ -1,12 +1,13 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import DarkModeToggle from './DarkModeToggle'
 
 describe('DarkModeToggle', () => {
     test('renders correctly', () => {
-        const { container, getByText } = render(<DarkModeToggle />)
-        expect(getByText('☀')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        render(<DarkModeToggle />)
+        const component = screen.queryByTestId('dark-mode-toggle')
+        expect(component).toBeInTheDocument()
+        expect(component).toMatchSnapshot()
     })
 })

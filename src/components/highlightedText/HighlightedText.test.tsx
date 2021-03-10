@@ -1,14 +1,13 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import HighlightedText from './HighlightedText'
 
 describe('HighlightedText', () => {
     test('renders correctly', () => {
-        const { container, getByText } = render(
-            <HighlightedText>Highlighted Text</HighlightedText>
-        )
-        expect(getByText('Highlighted Text')).toBeInTheDocument()
-        expect(container).toMatchSnapshot()
+        render(<HighlightedText>Highlighted Text</HighlightedText>)
+        const component = screen.queryByText('Highlighted Text')
+        expect(component).toBeInTheDocument()
+        expect(component).toMatchSnapshot()
     })
 })
