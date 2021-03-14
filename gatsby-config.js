@@ -9,7 +9,6 @@ module.exports = {
     siteMetadata: {
         title: 'Marcel Birkhahn',
         description: 'This is me!',
-        keywords: ['Portfolio', 'Frontend Engineer'],
         siteUrl: `https://marcelbirkhahn.com/`,
     },
     flags: {

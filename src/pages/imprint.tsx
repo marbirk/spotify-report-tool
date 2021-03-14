@@ -1,9 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
+import { SiteMetadataProps } from './index'
+import Seo from '../components/Seo'
 
 interface ImprintPageProps extends PageProps {
     data: {
+        site: {
+            siteMetadata: SiteMetadataProps
+        }
         allImprintJson: {
             edges: Array<SectionProps>
         }
@@ -19,8 +24,15 @@ interface SectionProps {
 }
 
 const ImprintPage = (props: ImprintPageProps) => {
+    const { title, description, siteUrl } = props.data.site.siteMetadata
     return (
         <Layout>
+            <Seo
+                pageTitle="Imprint"
+                siteTitle={title}
+                description={description}
+                siteUrl={siteUrl}
+            />
             <section>
                 <h2>Imprint</h2>
                 <img
@@ -59,6 +71,13 @@ const ImprintPage = (props: ImprintPageProps) => {
 
 export const query = graphql`
     query ImprintPageQuery {
+        site {
+            siteMetadata {
+                title
+                description
+                siteUrl
+            }
+        }
         allImprintJson {
             edges {
                 node {

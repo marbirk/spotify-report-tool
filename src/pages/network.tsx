@@ -3,9 +3,14 @@ import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/grid/Grid'
+import { SiteMetadataProps } from './index'
+import Seo from '../components/Seo'
 
 interface NetworkPageProps extends PageProps {
     data: {
+        site: {
+            siteMetadata: SiteMetadataProps
+        }
         allCustomApi: {
             edges: Array<ContactProps>
         }
@@ -23,8 +28,15 @@ interface ContactProps {
 }
 
 const NetworkPage = (props: NetworkPageProps) => {
+    const { title, description, siteUrl } = props.data.site.siteMetadata
     return (
         <Layout>
+            <Seo
+                pageTitle="Network"
+                siteTitle={title}
+                description={description}
+                siteUrl={siteUrl}
+            />
             <section>
                 <p>{networkText} Check out all contacts below:</p>
                 <Grid>{renderNetworkList()}</Grid>
@@ -80,6 +92,13 @@ export const networkText =
 
 export const query = graphql`
     query NetworkPageQuery {
+        site {
+            siteMetadata {
+                title
+                description
+                siteUrl
+            }
+        }
         allCustomApi(filter: { active: { eq: true } }) {
             edges {
                 node {

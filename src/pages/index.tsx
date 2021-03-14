@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, Link, PageProps } from 'gatsby'
-import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import ExternalLink from '../components/externalLink/ExternalLink'
 import Grid from '../components/grid/Grid'
+import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
 import { networkText } from './network'
 
@@ -19,10 +19,10 @@ interface HomePageProps extends PageProps {
     }
 }
 
-interface SiteMetadataProps {
+export interface SiteMetadataProps {
     title: string
     description: string
-    keywords: Array<string>
+    siteUrl: string
 }
 
 interface SpotifyTopArtistProps {
@@ -49,23 +49,17 @@ interface SpotifyTopArtistProps {
 }
 
 const HomePage = (props: HomePageProps) => {
-    const { title, description, keywords } = props.data.site.siteMetadata
+    const { title, description, siteUrl } = props.data.site.siteMetadata
     const masterDegree =
         'https://www.th-luebeck.de/hochschule/fachbereich-elektrotechnik-und-informatik/studiengaenge/medieninformatik-online-msc/uebersicht/'
     return (
         <Layout>
-            <Helmet
-                title={`Home | ${title}`}
-                meta={[
-                    { name: 'description', content: description },
-                    { name: 'keywords', content: keywords.join() },
-                ]}
-            >
-                <html lang="en" />
-                <noscript>
-                    This site runs best with JavaScript enabled.
-                </noscript>
-            </Helmet>
+            <Seo
+                pageTitle="Home"
+                siteTitle={title}
+                description={description}
+                siteUrl={siteUrl}
+            />
             <section>
                 <p>
                     I live next to Hamburg. My job as a Frontend Engineer
@@ -153,7 +147,7 @@ export const query = graphql`
             siteMetadata {
                 title
                 description
-                keywords
+                siteUrl
             }
         }
         allSpotifyTopArtist(sort: { fields: order }, limit: 6) {
