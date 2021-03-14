@@ -6,7 +6,7 @@ interface HighlightedTextProps {
 
 const HighlightedText = ({ children, ...props }: HighlightedTextProps) => (
     <div
-        className="pl-8 pr-8 mt-8 mb-8 border-l-4 border-highlight-600 dark:border-highlight-300 italic"
+        className="pt-2 pb-2 pl-8 pr-8 mt-8 mb-8 border-l-4 border-highlight-600 dark:border-highlight-300 italic"
         {...props}
     >
         {children}

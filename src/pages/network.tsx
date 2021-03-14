@@ -25,7 +25,6 @@ interface ContactProps {
 const NetworkPage = (props: NetworkPageProps) => {
     return (
         <Layout>
-            <h2>Network</h2>
             <p>{networkText} Check out all contacts below:</p>
             <Grid>{renderNetworkList()}</Grid>
         </Layout>

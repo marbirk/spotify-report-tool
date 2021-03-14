@@ -26,7 +26,7 @@ const getStartPageBanner = () => {
             <Typewriter
                 onInit={typewriter => {
                     typewriter
-                        .pauseFor(2500)
+                        .pauseFor(2000)
                         .typeString('Marcel Birkhahn')
                         .deleteAll()
                         .typeString('Frontend Engineer')
@@ -34,6 +34,7 @@ const getStartPageBanner = () => {
                         .typeString('Studying IT Master')
                         .deleteAll()
                         .typeString('Hard Rock Fan')
+                        .pauseFor(1000)
                         .start()
                 }}
                 options={{

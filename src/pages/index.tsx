@@ -50,6 +50,8 @@ interface SpotifyTopArtistProps {
 
 const HomePage = (props: HomePageProps) => {
     const { title, description, keywords } = props.data.site.siteMetadata
+    const masterDegree =
+        'https://www.th-luebeck.de/hochschule/fachbereich-elektrotechnik-und-informatik/studiengaenge/medieninformatik-online-msc/uebersicht/'
     return (
         <Layout>
             <Helmet
@@ -83,14 +85,17 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    Next to my job I'm doing my M.Sc. degree of computer science
-                    and media applications at Technical University of Applied
-                    Sciences Lübeck. User experience, modern software
-                    development, clean coding and data science are part of my
-                    master degree. My last scientific project was formed in
-                    corporation with Steinberg. It was a interdisciplinary
-                    project with focus on persona methods, web analytics and
-                    data science approaches:
+                    Next to my job I'm doing my{' '}
+                    <ExternalLink href={`${masterDegree}`}>
+                        M.Sc. degree of computer science and media applications
+                    </ExternalLink>{' '}
+                    at Technical University of Applied Sciences Lübeck. User
+                    experience, modern software development, clean coding and
+                    data science are part of my master degree. My last
+                    scientific project was formed in corporation with Steinberg
+                    Media Technologies GmbH. It was a interdisciplinary project
+                    with focus on persona methods, web analytics and data
+                    science approaches:
                 </p>
                 <HighlightedText>
                     Personas in e-commerce - evaluation of the data-driven
@@ -114,11 +119,6 @@ const HomePage = (props: HomePageProps) => {
                 </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
-            - Unit tests? - Storybook - Cypress - Applitools? - font for
-            headline and text? - filter to network? - Privacy-Text - Favicons -
-            Dark mode switch klassen mit tailwind - gatsby-plugin-mdx? - Content
-            über contentful?- - Offline Support? - Manifest? - use own graphql
-            api with firebase database
         </Layout>
     )
 
