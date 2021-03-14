@@ -21,13 +21,15 @@ interface SectionProps {
 const ImprintPage = (props: ImprintPageProps) => {
     return (
         <Layout>
-            <h2>Imprint</h2>
-            <img
-                src="https://ssl.greensta.de/wp-content/uploads/2019/12/100prozent_banner-250-white.png"
-                width="250"
-                height="110"
-                alt="Greensta Logo"
-            />
+            <section>
+                <h2>Imprint</h2>
+                <img
+                    src="https://ssl.greensta.de/wp-content/uploads/2019/12/100prozent_banner-250-white.png"
+                    width="250"
+                    height="110"
+                    alt="Greensta Logo"
+                />
+            </section>
             {renderPageContent()}
         </Layout>
     )

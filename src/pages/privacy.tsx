@@ -4,7 +4,9 @@ import Layout from '../components/layout/Layout'
 const PrivacyPage = () => {
     return (
         <Layout>
-            <h2>Privacy</h2>
+            <section>
+                <h2>Privacy</h2>
+            </section>
         </Layout>
     )
 }
