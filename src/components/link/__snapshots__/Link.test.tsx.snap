@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly external link 1`] = `
+<a
+  href="https://test-url.de"
+  rel="noreferrer noopener"
+  target="_blank"
+>
+  External Link
+</a>
+`;
+
+exports[`Link renders correctly gatsby link 1`] = `
+<a
+  href="/network"
+>
+  Internal Link
+</a>
+`;
