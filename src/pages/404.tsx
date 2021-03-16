@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
-import { Link } from 'gatsby'
+import Link from '../components/link/Link'
 import { graphql, PageProps } from 'gatsby'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'

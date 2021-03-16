@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
-import { graphql, Link, PageProps } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import Img from 'gatsby-image'
-import ExternalLink from '../components/externalLink/ExternalLink'
+import Link from '../components/link/Link'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
@@ -64,15 +64,15 @@ const HomePage = (props: HomePageProps) => {
                 <p>
                     I live next to Hamburg. My job as a Frontend Engineer
                     (B.Sc.) for{' '}
-                    <ExternalLink href="https://www.steinberg.net/">
+                    <Link to="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
-                    </ExternalLink>{' '}
+                    </Link>{' '}
                     combines two passions of me. I love everything around music
                     and I'm fascinated of modern web technologies. Steinberg, as
                     a part of Yamaha Corporation, is well known for its{' '}
-                    <ExternalLink href="https://de.wikipedia.org/wiki/Cubase">
+                    <Link to="https://de.wikipedia.org/wiki/Cubase">
                         Digital Audio Workstation Cubase
-                    </ExternalLink>
+                    </Link>
                     . A company full with musicians provides the possibility to
                     live both passions.
                 </p>
@@ -80,9 +80,9 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     Next to my job I'm doing my{' '}
-                    <ExternalLink href={`${masterDegree}`}>
+                    <Link to={`${masterDegree}`}>
                         M.Sc. degree of computer science and media applications
-                    </ExternalLink>{' '}
+                    </Link>{' '}
                     at Technical University of Applied Sciences Lübeck. User
                     experience, modern software development, clean coding and
                     data science are part of my master degree. My last

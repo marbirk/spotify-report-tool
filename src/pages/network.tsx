@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
-import ExternalLink from '../components/externalLink/ExternalLink'
+import Link from '../components/link/Link'
 import Grid from '../components/grid/Grid'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'
@@ -49,9 +49,9 @@ const NetworkPage = (props: NetworkPageProps) => {
             .sort((a, b) => a.node.name.localeCompare(b.node.name))
             .map((contact, index) => {
                 return (
-                    <ExternalLink
+                    <Link
                         key={index}
-                        href={contact.node.web}
+                        to={contact.node.web}
                         className="w-full bg-gray-200 dark:bg-gray-700 p-8 h-auto"
                     >
                         <div className="u-ratio-square bg-gray-400 dark:bg-gray-800 text-gray-200 dark:text-gray-700 flex items-center justify-center overflow-hidden u-dynamic-font-size">
@@ -63,7 +63,7 @@ const NetworkPage = (props: NetworkPageProps) => {
                                 {getTags(contact.node.tags)}
                             </p>
                         </div>
-                    </ExternalLink>
+                    </Link>
                 )
             })
     }

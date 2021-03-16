@@ -6,8 +6,8 @@ interface ExternalLinkProps {
     href: string
 }
 
-const ExternalLink = ({ children, ...props }: ExternalLinkProps) => (
-    <a target="_blank" rel="noreferrer noopener" {...props}>
+const ExternalLink = ({ children, ...other }: ExternalLinkProps) => (
+    <a target="_blank" rel="noreferrer noopener" {...other}>
         {children}
     </a>
 )
