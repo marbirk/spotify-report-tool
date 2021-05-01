@@ -1,5 +1,8 @@
 language: node_js
 before_install:
-    - npm install -g codecov
+    #- npm install -g codecov
+install:
+    - npm install
 script:
-    - jest --ci --coverage && codecov
+    #- jest --ci --coverage && codecov
+    - gatsby clean && gatsby build
