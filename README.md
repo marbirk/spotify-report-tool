@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/marbirk/marcelbirkhahn.com/badge.svg)](https://snyk.io/test/github/marbirk/marcelbirkhahn.com)
+
 # marcelbirkhahn.com
 
 This is my personal website.
