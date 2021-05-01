@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/marbirk/marcelbirkhahn.com/badge.svg)](https://snyk.io/test/github/marbirk/marcelbirkhahn.com)
+[![Known Vulnerabilities](https://snyk.io/test/github/marbirk/marcelbirkhahn.com/badge.svg?targetFile=package.json)](https://snyk.io/test/github/marbirk/marcelbirkhahn.com?targetFile=package.json)
 
 # marcelbirkhahn.com
 
