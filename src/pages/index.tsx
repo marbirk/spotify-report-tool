@@ -62,8 +62,8 @@ const HomePage = (props: HomePageProps) => {
             />
             <section>
                 <p>
-                    I live next to Hamburg. My job as a Frontend Engineer
-                    (B.Sc.) for{' '}
+                    I love to work and live in the area of Hamburg. My job as a
+                    Frontend Engineer (B.Sc.) for{' '}
                     <Link to="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
                     </Link>{' '}
@@ -107,9 +107,9 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     While I'm coding I listen to music every day. Mainly I like
-                    punk, ska and metal, but I'm always interested in new bands
-                    and extraordinary genres. The following list contains my
-                    current favourite artists on spotify:
+                    types of rock, but I'm always interested in new bands and
+                    extraordinary genres. The following list contains my current
+                    favourite artists on spotify:
                 </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
