@@ -16,7 +16,8 @@
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage --runInBand",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "autoprefixer": "^10.2.5",
