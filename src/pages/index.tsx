@@ -107,9 +107,9 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     While I'm coding I listen to music every day. Mainly I like
-                    types of rock, but I'm always interested in new bands and
-                    extraordinary genres. The following list contains my current
-                    favourite artists on spotify:
+                    various types of rock, but I'm always interested in new
+                    bands and extraordinary genres. The following list contains
+                    my current favourite artists on spotify:
                 </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
