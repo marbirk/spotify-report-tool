@@ -63,7 +63,7 @@ const HomePage = (props: HomePageProps) => {
             <section>
                 <p>
                     I love to work and live in the area of Hamburg. My job as a
-                    Frontend Engineer (B.Sc.) for{' '}
+                    Lead Frontend Engineer for{' '}
                     <Link to="https://www.steinberg.net/">
                         Steinberg Media Technologies GmbH
                     </Link>{' '}
