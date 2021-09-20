@@ -6,7 +6,7 @@ import Link from '../components/link/Link'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
-import { networkText } from './network'
+/* import { networkText } from './network' */
 
 interface HomePageProps extends PageProps {
     data: {
@@ -97,13 +97,13 @@ const HomePage = (props: HomePageProps) => {
                     online retail for customers with musical interest
                 </HighlightedText>
             </section>
-            <section>
+            {/* <section>
                 <p>
                     {networkText}{' '}
                     <Link to="/network">Check out the network page</Link> to
                     discover their passions and creative skills.
                 </p>
-            </section>
+            </section> */}
             <section>
                 <p>
                     While I'm coding I listen to music every day. Mainly I like

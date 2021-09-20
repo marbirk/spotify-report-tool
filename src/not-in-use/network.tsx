@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import Link from '../components/link/Link'
 import Grid from '../components/grid/Grid'
-import { SiteMetadataProps } from './index'
+import { SiteMetadataProps } from '../pages/index'
 import Seo from '../components/Seo'
 
 interface NetworkPageProps extends PageProps {
