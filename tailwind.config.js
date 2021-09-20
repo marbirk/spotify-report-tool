@@ -12,7 +12,7 @@ module.exports = {
             // Build your palette here
             transparent: 'transparent',
             current: 'currentColor',
-            highlight: colors.orange,
+            highlight: colors.cyan,
             gray: colors.blueGray,
         },
     },
