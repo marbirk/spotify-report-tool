@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from '../link/Link'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
-import ExternalLink from '../externalLink/ExternalLink'
 import ListElement from '../listElement/ListElement'
 import List from '../list/List'
 
@@ -19,9 +18,7 @@ const Footer = () => {
             </p>
             <List className={`flex ${marginBottom}`}>
                 <ListElement>
-                    <ExternalLink href="mailto:m.birkhahn@posteo.de">
-                        Contact
-                    </ExternalLink>
+                    <Link to="mailto:m.birkhahn@posteo.de">Contact</Link>
                 </ListElement>
                 <ListElement>
                     <Link to="/imprint">Imprint</Link>
@@ -32,19 +29,19 @@ const Footer = () => {
             </List>
             <List className="flex text-2xl">
                 <ListElement>
-                    <ExternalLink href="https://github.com/marbirk">
+                    <Link to="https://github.com/marbirk">
                         <IoLogoGithub className={iconClasses} />
-                    </ExternalLink>
+                    </Link>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink href="https://twitter.com/MBirkhahn">
+                    <Link to="https://twitter.com/MBirkhahn">
                         <IoLogoTwitter className={iconClasses} />
-                    </ExternalLink>
+                    </Link>
                 </ListElement>
                 <ListElement>
-                    <ExternalLink href="https://www.xing.com/profile/Marcel_Birkhahn/cv">
+                    <Link to="https://www.xing.com/profile/Marcel_Birkhahn/cv">
                         <IoLogoXing className={iconClasses} />
-                    </ExternalLink>
+                    </Link>
                 </ListElement>
             </List>
         </footer>
