@@ -7,6 +7,7 @@ import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
 /* import { networkText } from './network' */
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -50,6 +51,7 @@ interface SpotifyTopArtistProps {
 
 const HomePage = (props: HomePageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
+    const intl = useIntl()
     const masterDegree =
         'https://www.th-luebeck.de/hochschule/fachbereich-elektrotechnik-und-informatik/studiengaenge/medieninformatik-online-msc/uebersicht/'
     return (
@@ -105,12 +107,7 @@ const HomePage = (props: HomePageProps) => {
                 </p>
             </section> */}
             <section>
-                <p>
-                    While I'm coding I listen to music every day. Mainly I like
-                    various types of rock, but I'm always interested in new
-                    bands and extraordinary genres. The following list contains
-                    my current favourite artists on spotify:
-                </p>
+                <p>{intl.formatMessage({ id: 'music_section' })}:</p>
                 <Grid>{renderBandList()}</Grid>
             </section>
         </Layout>
