@@ -7,7 +7,7 @@ import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
 /* import { networkText } from './network' */
-import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface HomePageProps extends PageProps {
     data: {

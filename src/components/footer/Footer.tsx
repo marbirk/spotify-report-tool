@@ -3,8 +3,10 @@ import Link from '../link/Link'
 import { IoLogoGithub, IoLogoTwitter, IoLogoXing } from 'react-icons/io5'
 import ListElement from '../listElement/ListElement'
 import List from '../list/List'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const Footer = () => {
+    const intl = useIntl()
     const currentYear = new Date().getFullYear()
     const marginBottom = 'mb-4'
     const iconClasses = 'text-gray-800 dark:text-gray-200'
@@ -14,7 +16,8 @@ const Footer = () => {
             data-testid="footer"
         >
             <p className={`text-center ${marginBottom}`}>
-                © {currentYear} Marcel Birkhahn. All rights reserved.
+                © {currentYear} Marcel Birkhahn.{' '}
+                {intl.formatMessage({ id: 'right_info' })}.
             </p>
             <List className={`flex ${marginBottom}`}>
                 <ListElement>
