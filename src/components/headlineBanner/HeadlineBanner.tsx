@@ -1,13 +1,15 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import Link from '../link/Link'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface HeadlineBannerProps {
     pathname: string
 }
 
 const HeadlineBanner = ({ pathname }: HeadlineBannerProps) => {
-    const isStartPage = pathname.length === 1
+    const intl = useIntl()
+    const isStartPage = pathname === `/${intl.locale}/`
     return (
         <div className="mb-32 mt-24" data-testid="headline-banner">
             <Link to="/">
