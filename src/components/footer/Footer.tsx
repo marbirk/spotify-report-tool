@@ -22,17 +22,17 @@ const Footer = () => {
             <List className={`flex ${marginBottom}`}>
                 <ListElement>
                     <Link to="mailto:m.birkhahn@posteo.de">
-                        {intl.formatMessage({ id: 'footer_contact' })}
+                        {intl.formatMessage({ id: 'contact' })}
                     </Link>
                 </ListElement>
                 <ListElement>
                     <Link to="/imprint">
-                        {intl.formatMessage({ id: 'footer_imprint' })}
+                        {intl.formatMessage({ id: 'imprint' })}
                     </Link>
                 </ListElement>
                 <ListElement>
                     <Link to="/privacy">
-                        {intl.formatMessage({ id: 'footer_privacy' })}
+                        {intl.formatMessage({ id: 'privacy' })}
                     </Link>
                 </ListElement>
             </List>
