@@ -1,6 +1,6 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
-import { Link } from 'gatsby'
+import Link from '../link/Link'
 
 interface HeadlineBannerProps {
     pathname: string
