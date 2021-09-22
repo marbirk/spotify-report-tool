@@ -57,7 +57,7 @@ const HomePage = (props: HomePageProps) => {
     return (
         <Layout>
             <Seo
-                pageTitle="Home"
+                pageTitle={intl.formatMessage({ id: 'home' })}
                 siteTitle={title}
                 description={description}
                 siteUrl={siteUrl}

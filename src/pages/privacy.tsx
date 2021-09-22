@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface PrivacyPageProps extends PageProps {
     data: {
@@ -14,16 +15,18 @@ interface PrivacyPageProps extends PageProps {
 
 const PrivacyPage = (props: PrivacyPageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
+    const intl = useIntl()
+    const headline = intl.formatMessage({ id: 'privacy' })
     return (
         <Layout>
             <Seo
-                pageTitle="Privacy"
+                pageTitle={headline}
                 siteTitle={title}
                 description={description}
                 siteUrl={siteUrl}
             />
             <section>
-                <h2>Privacy</h2>
+                <h2>{headline}</h2>
             </section>
         </Layout>
     )

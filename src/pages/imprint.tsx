@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface ImprintPageProps extends PageProps {
     data: {
@@ -25,16 +26,18 @@ interface SectionProps {
 
 const ImprintPage = (props: ImprintPageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
+    const intl = useIntl()
+    const headline = intl.formatMessage({ id: 'imprint' })
     return (
         <Layout>
             <Seo
-                pageTitle="Imprint"
+                pageTitle={headline}
                 siteTitle={title}
                 description={description}
                 siteUrl={siteUrl}
             />
             <section>
-                <h2>Imprint</h2>
+                <h2>{headline}</h2>
                 <img
                     src="https://ssl.greensta.de/wp-content/uploads/2019/12/100prozent_banner-250-white.png"
                     width="250"
