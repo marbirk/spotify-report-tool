@@ -94,9 +94,7 @@ const HomePage = (props: HomePageProps) => {
                     science approaches:
                 </p>
                 <HighlightedText>
-                    Personas in e-commerce - evaluation of the data-driven
-                    persona method as a basis for product recommendations in
-                    online retail for customers with musical interest
+                    {intl.formatMessage({ id: 'project_title' })}
                 </HighlightedText>
             </section>
             {/* <section>
