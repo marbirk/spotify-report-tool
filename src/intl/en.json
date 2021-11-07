@@ -5,5 +5,8 @@
     "imprint": "Imprint",
     "privacy": "Privacy",
     "home": "Home",
-    "project_title": "Personas in e-commerce - evaluation of the data-driven persona method as a basis for product recommendations in online retail for customers with musical interest"
+    "project_title": "Personas in e-commerce - evaluation of the data-driven persona method as a basis for product recommendations in online retail for customers with musical interest",
+    "404_headline": "Page not found",
+    "404_text": "This is not the page you are looking for",
+    "404_link": "Return to home"
 }
