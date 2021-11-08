@@ -81,17 +81,11 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    Next to my job I'm doing my{' '}
+                    {intl.formatMessage({ id: 'study_part_one' })}{' '}
                     <Link to={`${masterDegree}`}>
-                        M.Sc. degree of computer science and media applications
+                        {intl.formatMessage({ id: 'study_name' })}
                     </Link>{' '}
-                    at Technical University of Applied Sciences Lübeck. User
-                    experience, modern software development, clean coding and
-                    data science are part of my master degree. My last
-                    scientific project was formed in corporation with Steinberg
-                    Media Technologies GmbH. It was a interdisciplinary project
-                    with focus on persona methods, web analytics and data
-                    science approaches:
+                    {intl.formatMessage({ id: 'study_part_two' })}:
                 </p>
                 <HighlightedText>
                     {intl.formatMessage({ id: 'project_title' })}
