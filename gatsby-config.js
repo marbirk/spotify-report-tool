@@ -30,15 +30,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-intl`,
-            options: {
-              path: `${__dirname}/src/intl`,
-              languages: [`en`, `de`],
-              defaultLanguage: `en`,
-              redirect: true,
-            },
-          },
-        {
             resolve: 'gatsby-source-custom-api',
             options: {
                 url: `https://602935da289eb50017cf7796.mockapi.io/contacts/`,

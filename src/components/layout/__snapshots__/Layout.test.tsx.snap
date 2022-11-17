@@ -77,8 +77,8 @@ exports[`Layout renders correctly 1`] = `
       class="text-center mb-4"
     >
       © 
-      2021
-       Marcel Birkhahn. All rights reserved.
+      2022
+       Marcel Birkhahn. Alle Rechte vorbehalten.
     </p>
     <ul
       class="flex mb-4"
@@ -91,7 +91,7 @@ exports[`Layout renders correctly 1`] = `
           rel="noreferrer noopener"
           target="_blank"
         >
-          Contact
+          Kontakt
         </a>
       </li>
       <li
@@ -100,7 +100,7 @@ exports[`Layout renders correctly 1`] = `
         <a
           href="/imprint"
         >
-          Imprint
+          Impressum
         </a>
       </li>
       <li
@@ -109,7 +109,7 @@ exports[`Layout renders correctly 1`] = `
         <a
           href="/privacy"
         >
-          Privacy
+          Datenschutz
         </a>
       </li>
     </ul>

@@ -7,7 +7,6 @@ import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import HighlightedText from '../components/highlightedText/HighlightedText'
 /* import { networkText } from './network' */
-import { useIntl } from 'gatsby-plugin-intl'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -51,13 +50,12 @@ interface SpotifyTopArtistProps {
 
 const HomePage = (props: HomePageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
-    const intl = useIntl()
     const masterDegree =
         'https://www.th-luebeck.de/hochschule/fachbereich-elektrotechnik-und-informatik/studiengaenge/medieninformatik-online-msc/uebersicht/'
     return (
         <Layout>
             <Seo
-                pageTitle={intl.formatMessage({ id: 'home' })}
+                pageTitle="Start"
                 siteTitle={title}
                 description={description}
                 siteUrl={siteUrl}
@@ -81,14 +79,22 @@ const HomePage = (props: HomePageProps) => {
             </section>
             <section>
                 <p>
-                    {intl.formatMessage({ id: 'study_part_one' })}{' '}
+                    Neben meinem Job studiere ich den{' '}
                     <Link to={`${masterDegree}`}>
-                        {intl.formatMessage({ id: 'study_name' })}
+                        Master of Science im Bereich Medieninformatik
                     </Link>{' '}
-                    {intl.formatMessage({ id: 'study_part_two' })}:
+                    an der Technischen Hochschule Lübeck. User Experience,
+                    moderne Softwareentwicklung, Clean Coding und Data Science
+                    sind Teil meines Masterstudiums. Mein letztes
+                    wissenschaftliches Projekt entstand in Zusammenarbeit mit
+                    der Steinberg Media Technologies GmbH. Es war ein
+                    interdisziplinäres Projekt mit Fokus auf Persona-Methoden,
+                    Web-Analytics und Data-Science:
                 </p>
                 <HighlightedText>
-                    {intl.formatMessage({ id: 'project_title' })}
+                    Personas im E-Commerce – Evaluation der datengetriebenen
+                    Persona Methode als Grundlage für Produktempfehlungen im
+                    Onlinehandel für musikaffine Kunden
                 </HighlightedText>
             </section>
             {/* <section>
@@ -99,7 +105,13 @@ const HomePage = (props: HomePageProps) => {
                 </p>
             </section> */}
             <section>
-                <p>{intl.formatMessage({ id: 'music_section' })}:</p>
+                <p>
+                    Während der Arbeit, höre ich jeden Tag Musik. Hauptsächlich
+                    mag ich verschiedene Arten von Rock, bin aber immer an neuen
+                    Bands und außergewöhnlichen Genres interessiert. Die
+                    folgende Liste enthält meine aktuellen Lieblingskünstler auf
+                    Spotify:
+                </p>
                 <Grid>{renderBandList()}</Grid>
             </section>
         </Layout>

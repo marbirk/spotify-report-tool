@@ -3,7 +3,6 @@ import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'
-import { useIntl } from 'gatsby-plugin-intl'
 
 interface ImprintPageProps extends PageProps {
     data: {
@@ -26,8 +25,7 @@ interface SectionProps {
 
 const ImprintPage = (props: ImprintPageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
-    const intl = useIntl()
-    const headline = intl.formatMessage({ id: 'imprint' })
+    const headline = 'Impressum'
     return (
         <Layout>
             <Seo

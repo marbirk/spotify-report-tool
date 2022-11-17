@@ -4,7 +4,6 @@ import Link from '../components/link/Link'
 import { graphql, PageProps } from 'gatsby'
 import { SiteMetadataProps } from './index'
 import Seo from '../components/Seo'
-import { useIntl } from 'gatsby-plugin-intl'
 
 interface NotFoundPageProps extends PageProps {
     data: {
@@ -16,10 +15,6 @@ interface NotFoundPageProps extends PageProps {
 
 const NotFoundPage = (props: NotFoundPageProps) => {
     const { title, description, siteUrl } = props.data.site.siteMetadata
-    const intl = useIntl()
-    const headline = intl.formatMessage({ id: '404_headline' })
-    const text = intl.formatMessage({ id: '404_text' })
-    const link = intl.formatMessage({ id: '404_link' })
     return (
         <Layout>
             <Seo
@@ -29,10 +24,10 @@ const NotFoundPage = (props: NotFoundPageProps) => {
                 siteUrl={siteUrl}
             />
             <section>
-                <h2>{headline}!</h2>
-                <p>{text}.</p>
+                <h2>Seite nicht gefunden!</h2>
+                <p>Dies ist nicht die Seite, nach der du suchst.</p>
                 <p>
-                    <Link to="/">{link} &gt;&gt;</Link>
+                    <Link to="/">Zurück zur Startseite &gt;&gt;</Link>
                 </p>
             </section>
         </Layout>

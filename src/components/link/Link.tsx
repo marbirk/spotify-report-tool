@@ -1,6 +1,6 @@
 import React from 'react'
 import ExternalLink from '../externalLink/ExternalLink'
-import { Link as IntlLink } from 'gatsby-plugin-intl'
+import { Link as InternalLink } from 'gatsby'
 
 interface LinkProps {
     children: React.ReactNode
@@ -13,9 +13,9 @@ const Link = ({ children, to, ...other }: LinkProps) => {
 
     if (internal) {
         return (
-            <IntlLink to={to} {...other}>
+            <InternalLink to={to} {...other}>
                 {children}
-            </IntlLink>
+            </InternalLink>
         )
     }
 
