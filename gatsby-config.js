@@ -24,12 +24,6 @@ module.exports = {
         `gatsby-transformer-json`,
         `gatsby-plugin-sitemap`,
         {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `./src/data/`,
-            },
-        },
-        {
             resolve: 'gatsby-source-custom-api',
             options: {
                 url: `https://602935da289eb50017cf7796.mockapi.io/contacts/`,
