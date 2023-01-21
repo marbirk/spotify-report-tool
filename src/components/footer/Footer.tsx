@@ -14,19 +14,8 @@ const Footer = () => {
             data-testid="footer"
         >
             <p className={`text-center ${marginBottom}`}>
-                © {currentYear} Marcel Birkhahn. Alle Rechte vorbehalten.
+                © {currentYear} Marcel Birkhahn
             </p>
-            <List className={`flex ${marginBottom}`}>
-                <ListElement>
-                    <Link to="mailto:m.birkhahn@posteo.de">Kontakt</Link>
-                </ListElement>
-                <ListElement>
-                    <Link to="/imprint">Impressum</Link>
-                </ListElement>
-                <ListElement>
-                    <Link to="/privacy">Datenschutz</Link>
-                </ListElement>
-            </List>
             <List className="flex text-2xl">
                 <ListElement>
                     <Link to="https://github.com/marbirk">
