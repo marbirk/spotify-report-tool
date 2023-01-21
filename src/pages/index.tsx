@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
-import Img from 'gatsby-image'
+import StaticImage from 'gatsby-image'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
+import Link from '../components/link/Link'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -11,36 +12,60 @@ interface HomePageProps extends PageProps {
             siteMetadata: SiteMetadataProps
         }
         allSpotifyTopArtist: {
-            edges: Array<SpotifyTopArtistProps>
+            edges: SpotifyTopArtistProps[]
+        }
+        allSpotifyTopTrack: {
+            edges: SpotifyTopTrackProps[]
         }
     }
 }
 
-export interface SiteMetadataProps {
+export type SiteMetadataProps = {
     title: string
     description: string
     siteUrl: string
 }
 
-interface SpotifyTopArtistProps {
+type Image = {
+    localFile: {
+        childImageSharp: {
+            fluid: {
+                base64: string
+                aspectRatio: number
+                sizes: string
+                src: string
+                srcSet: string
+                srcSetWebp: string
+                srcWebp: string
+            }
+        }
+    }
+}
+
+type Artist = {
+    name: string
+}
+
+type SpotifyTopArtistProps = {
     node: {
         name: string
-        genres: Array<string>
+        genres: string[]
         id: string
-        image: {
-            localFile: {
-                childImageSharp: {
-                    fluid: {
-                        base64: string
-                        aspectRatio: number
-                        sizes: string
-                        src: string
-                        srcSet: string
-                        srcSetWebp: string
-                        srcWebp: string
-                    }
-                }
-            }
+        image: Image
+        external_urls: {
+            spotify: string
+        }
+    }
+}
+
+type SpotifyTopTrackProps = {
+    node: {
+        name: string
+        id: string
+        image: Image
+        artists: Artist[]
+        external_urls: {
+            spotify: string
         }
     }
 }
@@ -56,24 +81,50 @@ const HomePage = (props: HomePageProps) => {
                 siteUrl={siteUrl}
             />
             <section>
-                <h2>Top songs</h2>
-                <Grid>Songs</Grid>
+                <h2>Top tracks</h2>
+                <Grid>{renderTopTrackList()}</Grid>
             </section>
             <section>
                 <h2>Top artists</h2>
-                <Grid>{renderBandList()}</Grid>
+                <Grid>{renderTopArtistList()}</Grid>
             </section>
         </Layout>
     )
 
-    function renderBandList() {
-        return props.data.allSpotifyTopArtist.edges.map(artist => {
+    function renderTopTrackList() {
+        return props.data.allSpotifyTopTrack.edges.map(track => {
             return (
-                <div
-                    key={artist.node.id}
+                <Link
+                    key={track.node.id}
+                    to={track.node.external_urls.spotify}
                     className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
                 >
-                    <Img
+                    <StaticImage
+                        loading="lazy"
+                        className="u-ratio-square"
+                        fluid={track.node.image.localFile.childImageSharp.fluid}
+                    />
+                    <div className="mt-4">
+                        <p>{track.node.name}</p>
+                        <p className="italic text-xs">
+                            {track.node.artists[0].name}
+                        </p>
+                    </div>
+                </Link>
+            )
+        })
+    }
+
+    function renderTopArtistList() {
+        return props.data.allSpotifyTopArtist.edges.map(artist => {
+            return (
+                <Link
+                    key={artist.node.id}
+                    to={artist.node.external_urls.spotify}
+                    className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
+                >
+                    <StaticImage
+                        loading="lazy"
                         className="u-ratio-square"
                         fluid={
                             artist.node.image.localFile.childImageSharp.fluid
@@ -85,7 +136,7 @@ const HomePage = (props: HomePageProps) => {
                             {artist.node.genres[0]}
                         </p>
                     </div>
-                </div>
+                </Link>
             )
         })
     }
@@ -114,6 +165,32 @@ export const query = graphql`
                                 }
                             }
                         }
+                    }
+                    external_urls {
+                        spotify
+                    }
+                }
+            }
+        }
+        allSpotifyTopTrack(sort: { fields: order }, limit: 6) {
+            edges {
+                node {
+                    name
+                    id
+                    image {
+                        localFile {
+                            childImageSharp {
+                                fluid(maxWidth: 400) {
+                                    ...GatsbyImageSharpFluid_withWebp
+                                }
+                            }
+                        }
+                    }
+                    artists {
+                        name
+                    }
+                    external_urls {
+                        spotify
                     }
                 }
             }
