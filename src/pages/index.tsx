@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
-import StaticImage from 'gatsby-image'
+import GatsbyImage from 'gatsby-image'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import Link from '../components/link/Link'
@@ -99,7 +99,7 @@ const HomePage = (props: HomePageProps) => {
                     to={track.node.external_urls.spotify}
                     className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
                 >
-                    <StaticImage
+                    <GatsbyImage
                         loading="lazy"
                         className="u-ratio-square"
                         fluid={track.node.image.localFile.childImageSharp.fluid}
@@ -123,7 +123,7 @@ const HomePage = (props: HomePageProps) => {
                     to={artist.node.external_urls.spotify}
                     className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
                 >
-                    <StaticImage
+                    <GatsbyImage
                         loading="lazy"
                         className="u-ratio-square"
                         fluid={
