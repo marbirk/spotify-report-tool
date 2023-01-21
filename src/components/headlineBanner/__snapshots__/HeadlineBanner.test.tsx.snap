@@ -11,22 +11,7 @@ exports[`HeadlineBanner renders on home correctly 1`] = `
     <h1
       class="u-squishy-text"
     >
-      <span>
-        I am
-      </span>
-      <div
-        class="Typewriter"
-        data-testid="typewriter-wrapper"
-      >
-        <span
-          class="Typewriter__wrapper"
-        />
-        <span
-          class="Typewriter__cursor"
-        >
-          |
-        </span>
-      </div>
+      Spotify report
     </h1>
   </a>
 </div>
@@ -43,16 +28,7 @@ exports[`HeadlineBanner renders on other pages correctly 1`] = `
     <h1
       class="u-squishy-text"
     >
-      <span
-        class="block"
-      >
-        Marcel
-      </span>
-      <span
-        class="block"
-      >
-        Birkhahn
-      </span>
+      Spotify report
     </h1>
   </a>
 </div>

@@ -45,22 +45,7 @@ exports[`Header renders correctly 1`] = `
       <h1
         class="u-squishy-text"
       >
-        <span>
-          I am
-        </span>
-        <div
-          class="Typewriter"
-          data-testid="typewriter-wrapper"
-        >
-          <span
-            class="Typewriter__wrapper"
-          />
-          <span
-            class="Typewriter__cursor"
-          >
-            |
-          </span>
-        </div>
+        Spotify report
       </h1>
     </a>
   </div>

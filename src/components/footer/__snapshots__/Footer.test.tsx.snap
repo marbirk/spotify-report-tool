@@ -9,42 +9,9 @@ exports[`Footer renders correctly 1`] = `
     class="text-center mb-4"
   >
     © 
-    2022
-     Marcel Birkhahn. Alle Rechte vorbehalten.
+    2023
+     Marcel Birkhahn
   </p>
-  <ul
-    class="flex mb-4"
-  >
-    <li
-      class="pr-2 pl-2"
-    >
-      <a
-        href="mailto:m.birkhahn@posteo.de"
-        rel="noreferrer noopener"
-        target="_blank"
-      >
-        Kontakt
-      </a>
-    </li>
-    <li
-      class="pr-2 pl-2"
-    >
-      <a
-        href="/imprint"
-      >
-        Impressum
-      </a>
-    </li>
-    <li
-      class="pr-2 pl-2"
-    >
-      <a
-        href="/privacy"
-      >
-        Datenschutz
-      </a>
-    </li>
-  </ul>
   <ul
     class="flex text-2xl"
   >
