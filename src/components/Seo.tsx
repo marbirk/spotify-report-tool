@@ -5,16 +5,21 @@ interface SeoProps {
     pageTitle: string
     siteTitle: string
     description: string
-    siteUrl: string
+    blockIndex?: boolean
 }
 
-const Seo = (props: SeoProps) => {
+const Seo = ({
+    pageTitle,
+    siteTitle,
+    description,
+    blockIndex = false,
+}: SeoProps) => {
     return (
         <Helmet data-testid="seo">
-            {/* General tags */}
-            <title>{`${props.pageTitle} | ${props.siteTitle}`}</title>
-            <meta name="description" content={props.description} />
             <html lang="en" />
+            <title>{`${pageTitle} | ${siteTitle}`}</title>
+            <meta name="description" content={description} />
+            {blockIndex && <meta name="robots" content="noindex, nofollow" />}
             <noscript>This site runs best with JavaScript enabled.</noscript>
         </Helmet>
     )

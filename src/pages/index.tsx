@@ -71,14 +71,14 @@ type SpotifyTopTrackProps = {
 }
 
 const HomePage = (props: HomePageProps) => {
-    const { title, description, siteUrl } = props.data.site.siteMetadata
+    const { title, description } = props.data.site.siteMetadata
     return (
         <Layout>
             <Seo
                 pageTitle="Start"
                 siteTitle={title}
                 description={description}
-                siteUrl={siteUrl}
+                blockIndex={true}
             />
             <section>
                 <h2>Top tracks</h2>
