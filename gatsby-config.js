@@ -24,12 +24,6 @@ module.exports = {
         `gatsby-transformer-json`,
         `gatsby-plugin-sitemap`,
         {
-            resolve: 'gatsby-source-custom-api',
-            options: {
-                url: `https://602935da289eb50017cf7796.mockapi.io/contacts/`,
-            },
-        },
-        {
             resolve: `gatsby-source-spotify`,
             options: {
                 clientId: `aadcee04e02d42bd9c6b3e3b96de851f`,
@@ -41,42 +35,5 @@ module.exports = {
                 timeRanges: ['short_term'], // optional. Set time ranges to be fetched
             },
         },
-        /* {
-            resolve: `gatsby-plugin-google-analytics-gdpr`,
-            options: {
-                // The property ID; the tracking code won't be generated without it.
-                trackingId: 'UA-47721885-1',
-                // Optional parameter (default false) - Enable analytics in development mode.
-                enableDevelopment: false, // default false
-                // Optional parameter (default true) - Some countries (such as Germany) require you to use the _anonymizeIP function for Google Analytics. Otherwise you are not allowed to use it.
-                anonymizeIP: true,
-                // Optional parameter (default false) - Starts google analytics with cookies enabled. In some countries (such as Germany) this is not allowed.
-                autoStartWithCookiesEnabled: false,
-                // Optional parameter - Configuration for react-ga and google analytics
-                reactGaOptions: {
-                    debug: true,
-                    gaOptions: {
-                        sampleRate: 10,
-                    },
-                },
-            },
-        }, */
-        /* {
-            resolve: `gatsby-plugin-cookiehub-banner`,
-            options: {
-                // The ID is part of the CookieHub URL: https://cookiehub.net/cc/YOUR_COOKIEHUB_ID.js
-                cookieHubId: '3310b0ee',
-                // Optional parameter (default false) - Use new v2 API.
-                cookieHubV2Api: true,
-                // Categories configured with CookieHub
-                categories: [
-                    {
-                        categoryName: 'analytics', // Unique id of the category which is set by Cookiehub.
-                        cookieName:
-                            'gatsby-plugin-google-analytics-gdpr_cookies-enabled', // Your custom cookie name
-                    },
-                ],
-            },
-        }, */
     ],
 }
