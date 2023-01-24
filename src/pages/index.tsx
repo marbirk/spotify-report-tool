@@ -72,6 +72,8 @@ type SpotifyTopTrackProps = {
 
 const HomePage = (props: HomePageProps) => {
     const { title, description } = props.data.site.siteMetadata
+    const tracks = props.data.allSpotifyTopTrack.edges
+    const artists = props.data.allSpotifyTopArtist.edges
     return (
         <Layout>
             <Seo
@@ -80,66 +82,56 @@ const HomePage = (props: HomePageProps) => {
                 description={description}
                 blockIndex={true}
             />
-            <section>
-                <h2>Top tracks</h2>
-                <Grid>{renderTopTrackList()}</Grid>
-            </section>
-            <section>
-                <h2>Top artists</h2>
-                <Grid>{renderTopArtistList()}</Grid>
-            </section>
+            {renderTrackSection(tracks)}
+            {renderArtistSection(artists)}
         </Layout>
     )
+}
 
-    function renderTopTrackList() {
-        return props.data.allSpotifyTopTrack.edges.map(track => {
-            return (
-                <Link
-                    key={track.node.id}
-                    to={track.node.external_urls.spotify}
-                    className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
-                >
-                    <GatsbyImage
-                        loading="lazy"
-                        className="u-ratio-square"
-                        fluid={track.node.image.localFile.childImageSharp.fluid}
-                    />
-                    <div className="mt-4">
-                        <p>{track.node.name}</p>
-                        <p className="italic text-xs">
-                            {track.node.artists[0].name}
-                        </p>
-                    </div>
-                </Link>
-            )
-        })
-    }
+const renderTrackSection = (tracks: SpotifyTopTrackProps[]) => {
+    return (
+        <section>
+            <h2>Top tracks</h2>
+            <Grid>{renderList(tracks)}</Grid>
+        </section>
+    )
+}
 
-    function renderTopArtistList() {
-        return props.data.allSpotifyTopArtist.edges.map(artist => {
-            return (
-                <Link
-                    key={artist.node.id}
-                    to={artist.node.external_urls.spotify}
-                    className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
-                >
-                    <GatsbyImage
-                        loading="lazy"
-                        className="u-ratio-square"
-                        fluid={
-                            artist.node.image.localFile.childImageSharp.fluid
-                        }
-                    />
-                    <div className="mt-4">
-                        <p>{artist.node.name}</p>
-                        <p className="italic text-xs">
-                            {artist.node.genres[0]}
-                        </p>
-                    </div>
-                </Link>
-            )
-        })
-    }
+const renderArtistSection = (artists: SpotifyTopArtistProps[]) => {
+    return (
+        <section>
+            <h2>Top artists</h2>
+            <Grid>{renderList(artists)}</Grid>
+        </section>
+    )
+}
+
+const renderList = (
+    items: SpotifyTopTrackProps[] | SpotifyTopArtistProps[]
+) => {
+    return items.map(item => {
+        return (
+            <Link
+                key={item.node.id}
+                to={item.node.external_urls.spotify}
+                className="bg-gray-200 dark:bg-gray-700 capitalize p-8"
+            >
+                <GatsbyImage
+                    loading="lazy"
+                    className="u-ratio-square"
+                    fluid={item.node.image.localFile.childImageSharp.fluid}
+                />
+                <div className="mt-4">
+                    <p>{item.node.name}</p>
+                    <p className="italic text-xs">
+                        {item.node.artists
+                            ? item.node.artists[0].name
+                            : item.node.genres[0]}
+                    </p>
+                </div>
+            </Link>
+        )
+    })
 }
 
 export const query = graphql`
