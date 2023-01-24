@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {},
@@ -13,7 +13,7 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
             highlight: colors.cyan,
-            gray: colors.blueGray,
+            gray: colors.slate,
         },
     },
     variants: {
