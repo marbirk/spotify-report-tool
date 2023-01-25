@@ -77,7 +77,7 @@ const HomePage = (props: HomePageProps) => {
     return (
         <Layout>
             <Seo
-                pageTitle="Start"
+                pageTitle="Home"
                 siteTitle={title}
                 description={description}
                 blockIndex={true}

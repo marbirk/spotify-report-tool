@@ -7,9 +7,8 @@
 module.exports = {
     /* Your site config here */
     siteMetadata: {
-        title: 'Marcel Birkhahn',
-        description: 'This is me!',
-        siteUrl: `https://marcelbirkhahn.com/`,
+        title: 'Spotify report tool',
+        description: '',
     },
     flags: {
         PRESERVE_FILE_DOWNLOAD_CACHE: true,

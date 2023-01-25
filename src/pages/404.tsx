@@ -14,15 +14,10 @@ interface NotFoundPageProps extends PageProps {
 }
 
 const NotFoundPage = (props: NotFoundPageProps) => {
-    const { title, description, siteUrl } = props.data.site.siteMetadata
+    const { title, description } = props.data.site.siteMetadata
     return (
         <Layout>
-            <Seo
-                pageTitle="404"
-                siteTitle={title}
-                description={description}
-                siteUrl={siteUrl}
-            />
+            <Seo pageTitle="404" siteTitle={title} description={description} />
             <section>
                 <h2>Seite nicht gefunden!</h2>
                 <p>Dies ist nicht die Seite, nach der du suchst.</p>
