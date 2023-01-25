@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import { graphql, PageProps } from 'gatsby'
-import GatsbyImage from 'gatsby-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import Link from '../components/link/Link'
@@ -23,21 +23,12 @@ interface HomePageProps extends PageProps {
 export type SiteMetadataProps = {
     title: string
     description: string
-    siteUrl: string
 }
 
 type Image = {
     localFile: {
         childImageSharp: {
-            fluid: {
-                base64: string
-                aspectRatio: number
-                sizes: string
-                src: string
-                srcSet: string
-                srcSetWebp: string
-                srcWebp: string
-            }
+            gatsbyImageData: IGatsbyImageData
         }
     }
 }
@@ -119,7 +110,11 @@ const renderList = (
                 <GatsbyImage
                     loading="lazy"
                     className="u-ratio-square"
-                    fluid={item.node.image.localFile.childImageSharp.fluid}
+                    alt={item.node.name}
+                    image={
+                        item.node.image.localFile.childImageSharp
+                            .gatsbyImageData
+                    }
                 />
                 <div className="mt-4">
                     <p>{item.node.name}</p>
@@ -140,7 +135,6 @@ export const query = graphql`
             siteMetadata {
                 title
                 description
-                siteUrl
             }
         }
         allSpotifyTopArtist(sort: { fields: order }, limit: 6) {
@@ -152,9 +146,7 @@ export const query = graphql`
                     image {
                         localFile {
                             childImageSharp {
-                                fluid(maxWidth: 400) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(layout: CONSTRAINED)
                             }
                         }
                     }
@@ -172,9 +164,7 @@ export const query = graphql`
                     image {
                         localFile {
                             childImageSharp {
-                                fluid(maxWidth: 400) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(layout: CONSTRAINED)
                             }
                         }
                     }
