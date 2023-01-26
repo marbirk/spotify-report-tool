@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     /* Your site config here */
     siteMetadata: {
@@ -25,9 +29,9 @@ module.exports = {
         {
             resolve: `gatsby-source-spotify`,
             options: {
-                clientId: `aadcee04e02d42bd9c6b3e3b96de851f`,
-                clientSecret: `9bcbb5de393d437fb14760a8611e22a3`,
-                refreshToken: `AQAqiPp8Rvjo6aZKwKeplKK8j99DJKlrjk27WtphQvJxxlw6bFdw5W_AyjoRpxLv6sopnzQZlqDxwO0LB0Nwi5Ssa8tid6U7QqO9NCDbWt3PCJaEaOib0JHNxso4eA7gcgI`,
+                clientId: process.env.SPOTIFY_CLIENT_ID,
+                clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+                refreshToken: process.env.SPOTIFY_REFRESH_TOKEN,
 
                 fetchPlaylists: false, // optional. Set to false to disable fetching of your playlists
                 fetchRecent: false, // optional. Set to false to disable fetching of your recently played tracks

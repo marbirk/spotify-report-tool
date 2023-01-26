@@ -5,6 +5,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import Grid from '../components/grid/Grid'
 import Seo from '../components/Seo'
 import Link from '../components/link/Link'
+import { useEffect } from 'react'
 
 interface HomePageProps extends PageProps {
     data: {
@@ -65,6 +66,17 @@ const HomePage = (props: HomePageProps) => {
     const { title, description } = props.data.site.siteMetadata
     const tracks = props.data.allSpotifyTopTrack.edges
     const artists = props.data.allSpotifyTopArtist.edges
+
+    useEffect(() => {
+        const apiKey = process.env.SONGKICK_API_KEY
+        const fetchUrl = `https://api.songkick.com/api/3.0/events.json?apikey=${apiKey}&location=geo:53.55,10.0&artist_name=mono-%26-nikitaman`
+        fetch(fetchUrl)
+            .then(r =>
+                r.json().then(data => ({ status: r.status, body: data }))
+            )
+            .then(obj => console.log(obj))
+    })
+
     return (
         <Layout>
             <Seo
