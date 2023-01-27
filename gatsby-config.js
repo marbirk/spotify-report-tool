@@ -22,8 +22,9 @@ module.exports = {
         `gatsby-plugin-use-dark-mode`,
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
-        `gatsby-transformer-sharp`,
+        `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         `gatsby-transformer-json`,
         `gatsby-plugin-sitemap`,
         {
