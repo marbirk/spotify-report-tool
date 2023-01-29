@@ -64,7 +64,7 @@ type SpotifyTopTrackProps = {
 }
 
 const HomePage = (props: HomePageProps) => {
-    const [shows, setShows] = useState([])
+    const [shows, setShows] = useState<object[]>([])
     const { title, description } = props.data.site.siteMetadata
     const tracks = props.data.allSpotifyTopTrack.edges
     const artists = props.data.allSpotifyTopArtist.edges
@@ -77,6 +77,7 @@ const HomePage = (props: HomePageProps) => {
         artists.map(artist => {
             const artistName = artist.node.name.toLowerCase().replace(/ /g, '-')
             const encodedArtistName = encodeURIComponent(artistName)
+            const showsList: object[] = []
 
             const fetchUrl = `${eventsUrl}?apikey=${apiKey}&location=${location}&artist_name=${encodedArtistName}`
             fetch(fetchUrl)
@@ -85,15 +86,15 @@ const HomePage = (props: HomePageProps) => {
                 )
                 .then(obj => {
                     if (obj.body.resultsPage.totalEntries > 0) {
-                        setShows(
-                            obj.body.resultsPage.results.event[0].displayName
-                        )
+                        showsList.push({
+                            artistName: artistName,
+                            ...obj.body.resultsPage.results.event[0],
+                        })
+                        setShows(showsList)
                     }
                 })
         })
     }, [])
-
-    console.log(shows)
 
     return (
         <Layout>
@@ -104,7 +105,7 @@ const HomePage = (props: HomePageProps) => {
                 blockIndex={true}
             />
             {renderTrackSection(tracks)}
-            {renderArtistSection(artists)}
+            {renderArtistSection(artists, shows)}
         </Layout>
     )
 }
@@ -118,19 +119,24 @@ const renderTrackSection = (tracks: SpotifyTopTrackProps[]) => {
     )
 }
 
-const renderArtistSection = (artists: SpotifyTopArtistProps[]) => {
+const renderArtistSection = (
+    artists: SpotifyTopArtistProps[],
+    shows: object[]
+) => {
     return (
         <section>
             <h2>Top artists</h2>
-            <Grid>{renderList(artists)}</Grid>
+            <Grid>{renderList(artists, shows)}</Grid>
         </section>
     )
 }
 
 const renderList = (
-    items: SpotifyTopTrackProps[] | SpotifyTopArtistProps[]
+    items: SpotifyTopTrackProps[] | SpotifyTopArtistProps[],
+    shows?: object[]
 ) => {
     return items.map(item => {
+        const artistName = item.node.name.toLowerCase().replace(/ /g, '-')
         return (
             <Link
                 key={item.node.id}
@@ -154,12 +160,18 @@ const renderList = (
                             : item.node.genres[0]}
                     </p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 text-xs">
                     <p>Shows around me:</p>
+                    {shows && renderShowsOfArtist(shows, artistName)}
                 </div>
             </Link>
         )
     })
+}
+
+const renderShowsOfArtist = (shows: object[], artistName: string) => {
+    const showsOfArtist = shows.find(show => show.artistName === artistName)
+    console.log(showsOfArtist, artistName)
 }
 
 export const query = graphql`
