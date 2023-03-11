@@ -36,7 +36,7 @@ module.exports = {
 
                 fetchPlaylists: false, // optional. Set to false to disable fetching of your playlists
                 fetchRecent: false, // optional. Set to false to disable fetching of your recently played tracks
-                timeRanges: ['short_term'], // optional. Set time ranges to be fetched
+                timeRanges: ['medium_term'], // optional. Set time ranges to be fetched
             },
         },
     ],

@@ -16,9 +16,6 @@ interface HomePageProps extends PageProps {
         allSpotifyTopArtist: {
             edges: SpotifyTopArtistProps[]
         }
-        allSpotifyTopTrack: {
-            edges: SpotifyTopTrackProps[]
-        }
     }
 }
 
@@ -35,10 +32,6 @@ type Image = {
     }
 }
 
-type Artist = {
-    name: string
-}
-
 type SpotifyTopArtistProps = {
     node: {
         name: string
@@ -51,40 +44,29 @@ type SpotifyTopArtistProps = {
     }
 }
 
-type SpotifyTopTrackProps = {
-    node: {
-        name: string
-        id: string
-        image: Image
-        artists: Artist[]
-        external_urls: {
-            spotify: string
-        }
-    }
-}
-
 const HomePage = (props: HomePageProps) => {
     const [shows, setShows] = useState<object[]>([])
     const { title, description } = props.data.site.siteMetadata
-    const tracks = props.data.allSpotifyTopTrack.edges
     const artists = props.data.allSpotifyTopArtist.edges
 
     useEffect(() => {
         const eventsUrl = 'https://api.songkick.com/api/3.0/events.json'
         const apiKey = process.env.SONGKICK_API_KEY
-        const location = 'geo:53.55,10.0'
+        const hamburg = 'geo:53.55,10.0'
+        const hannover = 'geo:52.3667,9.71667'
 
         artists.map(artist => {
             const artistName = artist.node.name.toLowerCase().replace(/ /g, '-')
             const encodedArtistName = encodeURIComponent(artistName)
             const showsList: object[] = []
 
-            const fetchUrl = `${eventsUrl}?apikey=${apiKey}&location=${location}&artist_name=${encodedArtistName}`
+            const fetchUrl = `${eventsUrl}?apikey=${apiKey}&location=${hamburg}&artist_name=${encodedArtistName}`
             fetch(fetchUrl)
                 .then(r =>
                     r.json().then(data => ({ status: r.status, body: data }))
                 )
                 .then(obj => {
+                    console.log(obj.body.resultsPage)
                     if (obj.body.resultsPage.totalEntries > 0) {
                         showsList.push({
                             artistName: artistName,
@@ -104,18 +86,8 @@ const HomePage = (props: HomePageProps) => {
                 description={description}
                 blockIndex={true}
             />
-            {renderTrackSection(tracks)}
             {renderArtistSection(artists, shows)}
         </Layout>
-    )
-}
-
-const renderTrackSection = (tracks: SpotifyTopTrackProps[]) => {
-    return (
-        <section>
-            <h2>Top tracks</h2>
-            <Grid>{renderList(tracks)}</Grid>
-        </section>
     )
 }
 
@@ -125,16 +97,13 @@ const renderArtistSection = (
 ) => {
     return (
         <section>
-            <h2>Top artists</h2>
+            <h2>Top Spotify artists</h2>
             <Grid>{renderList(artists, shows)}</Grid>
         </section>
     )
 }
 
-const renderList = (
-    items: SpotifyTopTrackProps[] | SpotifyTopArtistProps[],
-    shows?: object[]
-) => {
+const renderList = (items: SpotifyTopArtistProps[], shows?: object[]) => {
     return items.map(item => {
         const artistName = item.node.name.toLowerCase().replace(/ /g, '-')
         return (
@@ -154,11 +123,7 @@ const renderList = (
                 />
                 <div className="mt-4">
                     <p>{item.node.name}</p>
-                    <p className="italic text-xs">
-                        {item.node.artists
-                            ? item.node.artists[0].name
-                            : item.node.genres[0]}
-                    </p>
+                    <p className="italic text-xs">{item.node.genres[0]}</p>
                 </div>
                 <div className="mt-4 text-xs">
                     <p>Shows around me:</p>
@@ -182,7 +147,7 @@ export const query = graphql`
                 description
             }
         }
-        allSpotifyTopArtist(sort: { fields: order }, limit: 6) {
+        allSpotifyTopArtist(sort: { fields: order }, limit: 12) {
             edges {
                 node {
                     name
@@ -194,27 +159,6 @@ export const query = graphql`
                                 gatsbyImageData(layout: CONSTRAINED)
                             }
                         }
-                    }
-                    external_urls {
-                        spotify
-                    }
-                }
-            }
-        }
-        allSpotifyTopTrack(sort: { fields: order }, limit: 6) {
-            edges {
-                node {
-                    name
-                    id
-                    image {
-                        localFile {
-                            childImageSharp {
-                                gatsbyImageData(layout: CONSTRAINED)
-                            }
-                        }
-                    }
-                    artists {
-                        name
                     }
                     external_urls {
                         spotify
