@@ -20,7 +20,7 @@
     "cypress:run": "cypress run"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.16",
     "gatsby": "^3.15.0",
     "gatsby-plugin-image": "^1.15.0",
     "gatsby-plugin-postcss": "^4.15.0",
